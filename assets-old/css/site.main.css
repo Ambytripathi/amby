@@ -1,0 +1,1782 @@
+#opening_hours > table > td{
+  padding:10px;
+}
+
+/* line 1, D:/xampp/htdocs/testing/styles/site.main.scss */
+.page-logo {
+  display: block;
+  background: url(/assets/images/logo-ms.png);
+  background-size: 15.2rem 4.8rem;
+  width: 15.2rem !important;
+  height: 4.8rem !important;
+  background-repeat: no-repeat !important;
+  font-size: 0;
+  color: transparent; }
+
+/* line 11, D:/xampp/htdocs/testing/styles/site.main.scss */
+body {
+  margin-top: 8rem; }
+
+/* line 15, D:/xampp/htdocs/testing/styles/site.main.scss */
+#page-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 16;
+  transition: background 0.3s, box-shadow 0.3s; }
+  /* line 22, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #page-header .page-header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.6rem 0;
+    margin: 0 1.6rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: border 0.3s; }
+  /* line 31, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #page-header .container {
+    padding: 0; }
+  /* line 34, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #page-header .nav-main {
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+    color: var(--text); }
+    /* line 40, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #page-header .nav-main a {
+      margin-left: 3.6rem;
+      transition: color 0.15s; }
+      /* line 43, D:/xampp/htdocs/testing/styles/site.main.scss */
+      #page-header .nav-main a.active, #page-header .nav-main a:hover {
+        color: var(--active); }
+
+/* line 50, D:/xampp/htdocs/testing/styles/site.main.scss */
+.page-scrolled #page-header {
+  background: var(--pageBackground);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); }
+  /* line 53, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .page-scrolled #page-header .page-header-wrapper {
+    border-color: transparent; }
+
+/* line 57, D:/xampp/htdocs/testing/styles/site.main.scss */
+#booking-map {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+
+/* line 65, D:/xampp/htdocs/testing/styles/site.main.scss */
+#booking .booking-wrapper {
+  position: relative;
+  background: rgba(0, 0, 0, 0.05);
+  padding-top: 40%;
+  max-height: 51.2rem;
+  min-height: 40rem;
+  border-radius: 2rem;
+  overflow: hidden; }
+
+/* line 74, D:/xampp/htdocs/testing/styles/site.main.scss */
+#booking .booking-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+
+/* line 83, D:/xampp/htdocs/testing/styles/site.main.scss */
+#logos-qa {
+  text-align: center;
+  padding: 6.4rem 0; }
+  /* line 86, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #logos-qa .logos-list {
+    max-width: 96rem; }
+
+/* line 91, D:/xampp/htdocs/testing/styles/site.main.scss */
+#logos-media {
+  text-align: center;
+  padding: 6.4rem 0; }
+  /* line 94, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #logos-media .logos-list {
+    margin-top: 8rem; }
+    /* line 96, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #logos-media .logos-list img {
+      height: 4rem; }
+
+/* line 102, D:/xampp/htdocs/testing/styles/site.main.scss */
+.steps {
+  padding: 3.2rem 0 6.4rem;
+  text-align: center; }
+  /* line 105, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .steps .steps-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 4.8rem -3.2rem 0; }
+    /* line 109, D:/xampp/htdocs/testing/styles/site.main.scss */
+    .steps .steps-list li {
+      position: relative;
+      border-radius: 2rem;
+      box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.15);
+      margin: 5.2rem 3.2rem 0;
+      padding: 5.2rem 3.2rem 4.8rem;
+      background: #ffffff; }
+    /* line 117, D:/xampp/htdocs/testing/styles/site.main.scss */
+    .steps .steps-list .step-icon {
+      border-radius: 100%;
+      width: 10.4rem;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    /* line 125, D:/xampp/htdocs/testing/styles/site.main.scss */
+    .steps .steps-list p {
+      font-size: 1.4rem;
+      line-height: 1.75;
+      letter-spacing: 0.3px; }
+
+/* line 134, D:/xampp/htdocs/testing/styles/site.main.scss */
+.dots-background:before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: calc(50% - 72rem);
+  top: 0;
+  bottom: 0;
+  width: 51.2rem;
+  background: url(/assets/images/b-dots.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 51.2rem; }
+
+/* line 147, D:/xampp/htdocs/testing/styles/site.main.scss */
+.dots-background.diamond-background:before {
+  background-image: url(/assets/images/b-diamond.png); }
+
+/* line 152, D:/xampp/htdocs/testing/styles/site.main.scss */
+.with-media {
+  padding: 4.8rem 0 9.6rem; }
+  /* line 154, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .with-media .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  /* line 160, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .with-media .content p {
+    font-size: 2rem;
+    line-height: 2;
+    letter-spacing: 0.5px;
+    max-width: 63.2rem; }
+  /* line 166, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .with-media .content p + p {
+    margin-top: 3.6rem; }
+  /* line 169, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .with-media .content .btn {
+    margin: 7.2rem auto 0; }
+  /* line 173, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .with-media .media-wrapper {
+    flex: 1 1 auto;
+    max-width: 54rem; }
+    /* line 176, D:/xampp/htdocs/testing/styles/site.main.scss */
+    .with-media .media-wrapper .media-content {
+      position: relative;
+      overflow: hidden;
+      /*padding-top: 75%;*/
+      border-radius: 2rem;
+      box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.15); }
+      /* line 182, D:/xampp/htdocs/testing/styles/site.main.scss */
+      .with-media .media-wrapper .media-content .video-player-play {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14.4rem;
+        color: var(--lightText);
+        cursor: pointer; }
+        /* line 190, D:/xampp/htdocs/testing/styles/site.main.scss */
+        .with-media .media-wrapper .media-content .video-player-play i {
+          transition: transform 0.3s; }
+      /* line 195, D:/xampp/htdocs/testing/styles/site.main.scss */
+      .with-media .media-wrapper .media-content video {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0; }
+      /* line 203, D:/xampp/htdocs/testing/styles/site.main.scss */
+      .with-media .media-wrapper .media-content.video-play .video-player-play {
+        pointer-events: none; }
+      /* line 206, D:/xampp/htdocs/testing/styles/site.main.scss */
+      .with-media .media-wrapper .media-content.video-play .video-player-play i {
+        transform: scale(0); }
+
+/* line 214, D:/xampp/htdocs/testing/styles/site.main.scss */
+.testimonials {
+  padding: 8rem 0 14rem; }
+  /* line 216, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .testimonials .testimonials-header {
+    display: flex;
+    align-items: center;
+    max-width: 102.4rem;
+    margin: 0 auto; }
+    /* line 221, D:/xampp/htdocs/testing/styles/site.main.scss */
+    .testimonials .testimonials-header .testimonails-header-line {
+      flex: 1 1 auto; }
+    /* line 224, D:/xampp/htdocs/testing/styles/site.main.scss */
+    .testimonials .testimonials-header i {
+      flex: 0 0 auto;
+      color: var(--accent);
+      margin: 0 4.8rem;
+      font-size: 5.2rem; }
+  /* line 231, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .testimonials .testimonials-quotes {
+    text-align: center; }
+    /* line 233, D:/xampp/htdocs/testing/styles/site.main.scss */
+    .testimonials .testimonials-quotes p {
+      font-size: 2rem;
+      line-height: 2;
+      letter-spacing: 0.5px;
+      max-width: 88rem;
+      margin: 4rem auto 7.2rem; }
+    /* line 240, D:/xampp/htdocs/testing/styles/site.main.scss */
+    .testimonials .testimonials-quotes footer {
+      font-size: 1.8rem;
+      line-height: 1.5;
+      letter-spacing: 0.1px; }
+      /* line 244, D:/xampp/htdocs/testing/styles/site.main.scss */
+      .testimonials .testimonials-quotes footer .testimony-avatar {
+        width: 19.2rem;
+        border-radius: 100%;
+        border: 0.4rem solid var(--accent);
+        margin: auto; }
+      /* line 250, D:/xampp/htdocs/testing/styles/site.main.scss */
+      .testimonials .testimonials-quotes footer .testimony-name {
+        margin: 2rem 0 0.8rem; }
+      /* line 253, D:/xampp/htdocs/testing/styles/site.main.scss */
+      .testimonials .testimonials-quotes footer .testimony-profession {
+        color: var(--lightText);
+        line-height: 1.25; }
+
+/* line 261, D:/xampp/htdocs/testing/styles/site.main.scss */
+.testimonials .slick-footers .slick-footers footer div {
+  opacity: 0;
+  transition: opacity 0.3s; }
+
+/* line 266, D:/xampp/htdocs/testing/styles/site.main.scss */
+.testimonials .slick-footers footer img {
+  transform: scale(0.75);
+  transition: transform 0.3s; }
+
+/* line 271, D:/xampp/htdocs/testing/styles/site.main.scss */
+.testimonials .slick-footers .slick-current footer div {
+  opacity: 1; }
+
+/* line 274, D:/xampp/htdocs/testing/styles/site.main.scss */
+.testimonials .slick-footers .slick-current footer img {
+  transform: scale(1); }
+
+/* line 278, D:/xampp/htdocs/testing/styles/site.main.scss */
+.testimonials .slick-footers:after,
+.testimonials .slick-footers:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8rem;
+  z-index: 12;
+  pointer-events: none; }
+
+/* line 287, D:/xampp/htdocs/testing/styles/site.main.scss */
+.testimonials .slick-footers:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%); }
+
+/* line 293, D:/xampp/htdocs/testing/styles/site.main.scss */
+.testimonials .slick-footers:before {
+  left: 0;
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); }
+
+/* line 299, D:/xampp/htdocs/testing/styles/site.main.scss */
+.call-to-action {
+  background: var(--accent);
+  color: var(--accentText);
+  text-align: center;
+  padding: 6rem 0;
+  font-size: 2rem;
+  line-height: 1.5;
+  letter-spacing: 0.2px; }
+  /* line 307, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .call-to-action:before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: calc(50% - 60rem);
+    top: 0;
+    bottom: 0;
+    width: 51.2rem;
+    background: url(/assets/images/b-dots.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 51.2rem; }
+  /* line 320, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .call-to-action h1 {
+    color: inherit;
+    max-width: 104rem; }
+  /* line 324, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .call-to-action .btn {
+    margin: 4rem 0 4.8rem; }
+  /* line 327, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .call-to-action .call-to-action-features {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+/* line 335, D:/xampp/htdocs/testing/styles/site.main.scss */
+#how-it-works .with-media {
+  padding: 4.8rem 0 6.4rem; }
+  /* line 337, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #how-it-works .with-media:before {
+    display: none; }
+  /* line 340, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #how-it-works .with-media .content {
+    position: relative;
+    top: -4rem; }
+    /* line 343, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #how-it-works .with-media .content p {
+      color: var(--lightText); }
+
+/* line 348, D:/xampp/htdocs/testing/styles/site.main.scss */
+#how-it-works .steps {
+  padding: 0; }
+  /* line 350, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #how-it-works .steps .steps-list {
+    margin: 0 -2.4rem 0; }
+    /* line 352, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #how-it-works .steps .steps-list li {
+      flex: 1 1 25%;
+      margin: 4rem 2.4rem 0;
+      padding: 4rem 0.4rem 2rem; }
+    /* line 357, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #how-it-works .steps .steps-list .step-icon {
+      width: 8rem; }
+    /* line 360, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #how-it-works .steps .steps-list h3 {
+      font-size: 1.8rem; }
+
+/* line 365, D:/xampp/htdocs/testing/styles/site.main.scss */
+#how-it-works #clinical-station-diagram {
+  padding: 8rem 0 4rem; }
+  /* line 367, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #how-it-works #clinical-station-diagram h1 {
+    text-align: center; }
+  /* line 370, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #how-it-works #clinical-station-diagram .clinical-station-diagram {
+    display: flex;
+    justify-content: center;
+    margin: 6rem 0 0; }
+    /* line 374, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-image-wrapper {
+      flex: 0 1 66rem;
+      align-self: center; }
+    /* line 378, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-list {
+      flex: 0 0 29.2rem;
+      margin: 4.8rem 0 0; }
+      /* line 381, D:/xampp/htdocs/testing/styles/site.main.scss */
+      #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-list h3 {
+        margin: 0 0 0.8rem;
+        color: inherit; }
+      /* line 385, D:/xampp/htdocs/testing/styles/site.main.scss */
+      #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-list p {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        letter-spacing: 0.3px; }
+      /* line 390, D:/xampp/htdocs/testing/styles/site.main.scss */
+      #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-list li {
+        display: flex;
+        height: 14.4rem; }
+      /* line 394, D:/xampp/htdocs/testing/styles/site.main.scss */
+      #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-list .icon {
+        flex: 0 0 auto;
+        background: rgba(0, 0, 0, 0.25);
+        background-size: contain;
+        width: 5.4rem;
+        height: 5.4rem;
+        border-radius: 1.6rem;
+        margin: 0 1.6rem; }
+      /* line 403, D:/xampp/htdocs/testing/styles/site.main.scss */
+      #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-list .content {
+        width: 100%; }
+      /* line 406, D:/xampp/htdocs/testing/styles/site.main.scss */
+      #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-list:first-child {
+        text-align: right; }
+        /* line 408, D:/xampp/htdocs/testing/styles/site.main.scss */
+        #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-list:first-child li {
+          flex-direction: row-reverse;
+          justify-content: flex-end; }
+      /* line 413, D:/xampp/htdocs/testing/styles/site.main.scss */
+      #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-list:last-child {
+        text-align: left; }
+        /* line 415, D:/xampp/htdocs/testing/styles/site.main.scss */
+        #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-list:last-child li {
+          justify-content: flex-start; }
+
+/* line 422, D:/xampp/htdocs/testing/styles/site.main.scss */
+#how-it-works #logos-qa {
+  padding: 12.8rem 0; }
+
+/* line 427, D:/xampp/htdocs/testing/styles/site.main.scss */
+a[href^="http://maps.google.com/maps"] {
+  display: none !important; }
+
+/* line 431, D:/xampp/htdocs/testing/styles/site.main.scss */
+a[href^="https://maps.google.com/maps"] {
+  display: none !important; }
+
+/* line 437, D:/xampp/htdocs/testing/styles/site.main.scss */
+.gmnoprint a,
+.gmnoprint span,
+.gm-style-cc {
+  display: none; }
+
+/* line 442, D:/xampp/htdocs/testing/styles/site.main.scss */
+#contact #contact-map {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+
+/* line 450, D:/xampp/htdocs/testing/styles/site.main.scss */
+#contact #contact-info:before {
+  top: 25%;
+  height: 51.2rem; }
+
+/* line 454, D:/xampp/htdocs/testing/styles/site.main.scss */
+#contact #contact-info .container {
+  align-items: flex-start; }
+
+/* line 458, D:/xampp/htdocs/testing/styles/site.main.scss */
+#contact #contact-form {
+  padding: 0 0 8rem; }
+  /* line 460, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #contact #contact-form h1 {
+    text-align: center; }
+  /* line 463, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #contact #contact-form form {
+    max-width: 70.4rem;
+    margin: 4rem auto; }
+
+/* line 469, D:/xampp/htdocs/testing/styles/site.main.scss */
+#contact #raise-complaint .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 96rem; }
+
+/* line 475, D:/xampp/htdocs/testing/styles/site.main.scss */
+#contact #raise-complaint a {
+  margin: 0; }
+
+/* line 485, D:/xampp/htdocs/testing/styles/site.main.scss */
+#contact-pharmacy #contact-info:before,
+#contact-business #contact-info:before,
+#contact-doctors #contact-info:before {
+  top: 25%;
+  height: 51.2rem; }
+
+/* line 489, D:/xampp/htdocs/testing/styles/site.main.scss */
+#contact-pharmacy #contact-info .content,
+#contact-business #contact-info .content,
+#contact-doctors #contact-info .content {
+  font-weight: 500; }
+  /* line 491, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #contact-pharmacy #contact-info .content a,
+  #contact-business #contact-info .content a,
+  #contact-doctors #contact-info .content a {
+    color: var(--accent); }
+
+/* line 498, D:/xampp/htdocs/testing/styles/site.main.scss */
+#contact-business #talk-to-us {
+  padding: 4rem 0 14rem; }
+  /* line 500, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #contact-business #talk-to-us ul {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    margin: 6.4rem 0 12rem;
+    margin-left: 6.4rem; }
+    /* line 507, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #contact-business #talk-to-us ul li {
+      display: flex;
+      align-items: center;
+      flex: 0 0 40rem; }
+      /* line 511, D:/xampp/htdocs/testing/styles/site.main.scss */
+      #contact-business #talk-to-us ul li i {
+        background: var(--accent);
+        color: var(--accentText);
+        font-size: 3.2rem;
+        width: 5.4rem;
+        height: 5.4rem;
+        line-height: 5.4rem;
+        border-radius: 1.6rem;
+        margin: 0 2.4rem;
+        text-align: center;
+        flex: 0 0 auto; }
+      /* line 524, D:/xampp/htdocs/testing/styles/site.main.scss */
+      #contact-business #talk-to-us ul li p {
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        max-width: 28rem; }
+
+/* line 535, D:/xampp/htdocs/testing/styles/site.main.scss */
+#contact-doctors .call-to-action {
+  margin-top: 8rem; }
+
+/* line 540, D:/xampp/htdocs/testing/styles/site.main.scss */
+.treat-section {
+  padding: 7.2rem 0; }
+  /* line 542, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .treat-section h1 {
+    text-align: center; }
+    /* line 544, D:/xampp/htdocs/testing/styles/site.main.scss */
+    .treat-section h1 i {
+      margin-right: 2rem;
+      color: var(--lightText); }
+  /* line 549, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .treat-section .subtitle {
+    margin: 4rem auto;
+    max-width: 80rem;
+    text-align: center; }
+  /* line 554, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .treat-section .treat-list {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center; }
+    /* line 558, D:/xampp/htdocs/testing/styles/site.main.scss */
+    .treat-section .treat-list li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      flex: 1 1 calc(100% / 3);
+      min-height: 12.8rem; }
+    /* line 566, D:/xampp/htdocs/testing/styles/site.main.scss */
+    .treat-section .treat-list h3 {
+      margin: 0.8rem auto;
+      color: inherit; }
+    /* line 570, D:/xampp/htdocs/testing/styles/site.main.scss */
+    .treat-section .treat-list p {
+      font-size: 1.4rem;
+      letter-spacing: 0.1px;
+      color: var(--lightText); }
+
+/* line 579, D:/xampp/htdocs/testing/styles/site.main.scss */
+#what-we-treat #intro {
+  padding: 0 0 8rem; }
+  /* line 581, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #what-we-treat #intro:before {
+    top: 12.5%;
+    height: 51.2rem; }
+  /* line 585, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #what-we-treat #intro h1 {
+    max-width: 80rem; }
+  /* line 588, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #what-we-treat #intro p {
+    max-width: 74rem;
+    margin-bottom: 4rem; }
+
+/* line 593, D:/xampp/htdocs/testing/styles/site.main.scss */
+#what-we-treat #can-treat {
+  background-color: #f3f6f7; }
+
+/* line 597, D:/xampp/htdocs/testing/styles/site.main.scss */
+#what-we-treat #cannot-treat h1, #what-we-treat #cannot-treat h3 {
+  color: #ff585b; }
+
+/* line 601, D:/xampp/htdocs/testing/styles/site.main.scss */
+#what-we-treat #call-to-action {
+  padding: 4.8rem 0 1.6rem; }
+  /* line 603, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #what-we-treat #call-to-action p {
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.1px;
+    max-width: 92rem;
+    margin: auto; }
+
+/* line 612, D:/xampp/htdocs/testing/styles/site.main.scss */
+#what-we-treat #logos-qa {
+  background-color: #f3f6f7; }
+
+/* line 619, D:/xampp/htdocs/testing/styles/site.main.scss */
+#faq #intro:before {
+  top: 12.5%;
+  height: 51.2rem; }
+
+/* line 624, D:/xampp/htdocs/testing/styles/site.main.scss */
+#faq #logos-qa {
+  background-color: #f3f6f7; }
+
+/* line 627, D:/xampp/htdocs/testing/styles/site.main.scss */
+#faq .faq-list {
+  max-width: 80rem;
+  margin: 0 auto;
+  text-align: left; }
+  /* line 631, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #faq .faq-list dt {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.4rem;
+    line-height: 2.4rem;
+    transition: color 0.3s; }
+    /* line 640, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #faq .faq-list dt:hover {
+      color: var(--accent); }
+    /* line 643, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #faq .faq-list dt:before {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: '\f067'; }
+    /* line 652, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #faq .faq-list dt:before {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2.4rem;
+      height: 2.4rem;
+      background: var(--accent);
+      color: var(--accentText);
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      text-align: center;
+      border-radius: 0.4rem; }
+  /* line 667, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #faq .faq-list dd {
+    font-size: 1.4rem;
+    line-height: 1.75;
+    letter-spacing: 0.1px;
+    color: var(--lightText);
+    overflow: hidden;
+    max-height: 0;
+    margin: 0.8rem 0 3.2rem;
+    max-width: 76rem;
+    opacity: 0;
+    transition: max-height 0.3s linear 0.3s, opacity 0.3s; }
+  /* line 679, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #faq .faq-list dt.opened:before {
+    content: '\f068'; }
+  /* line 682, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #faq .faq-list dt.opened + dd {
+    max-height: 128rem;
+    opacity: 1;
+    transition: max-height 0.9s, opacity 0.3s linear 0.3s; }
+
+/* line 691, D:/xampp/htdocs/testing/styles/site.main.scss */
+#reviews #intro p {
+  max-width: 108rem; }
+
+/* line 694, D:/xampp/htdocs/testing/styles/site.main.scss */
+#reviews #logos-qa {
+  background-color: #f3f6f7; }
+
+/* line 697, D:/xampp/htdocs/testing/styles/site.main.scss */
+#reviews .testimonials-reviews {
+  max-width: 102.4rem;
+  margin: 4rem auto 0; }
+  /* line 700, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #reviews .testimonials-reviews .review {
+    display: flex;
+    align-items: center; }
+    /* line 703, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #reviews .testimonials-reviews .review .review-meta {
+      text-align: center;
+      flex: 0 0 16rem; }
+    /* line 707, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #reviews .testimonials-reviews .review .review-content {
+      margin: 4rem 3.2rem 6rem;
+      font-size: 2rem;
+      line-height: 2;
+      letter-spacing: 0.5px; }
+    /* line 713, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #reviews .testimonials-reviews .review .review-author {
+      width: 6.4rem;
+      height: 6.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      margin: 0 auto 1.2rem;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: rgba(0, 0, 0, 0.95); }
+    /* line 726, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #reviews .testimonials-reviews .review .review-stars {
+      white-space: nowrap;
+      color: #ffba00; }
+    /* line 730, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #reviews .testimonials-reviews .review:nth-child(3n - 2) .review-author {
+      background: #ea3594; }
+    /* line 733, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #reviews .testimonials-reviews .review:nth-child(3n - 1) .review-author {
+      background: #04cbcb; }
+    /* line 736, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #reviews .testimonials-reviews .review:nth-child(3n) .review-author {
+      background: #ff585b; }
+
+/* line 744, D:/xampp/htdocs/testing/styles/site.main.scss */
+#pricing .pricing-list {
+  display: flex;
+  align-items: center;
+  margin: 0 auto 2.4rem;
+  max-width: 72rem; }
+
+/* line 751, D:/xampp/htdocs/testing/styles/site.main.scss */
+#pricing .pricing-package {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 100%;
+  border-radius: .8rem;
+  color: #ffffff;
+  padding: 0.8rem; }
+  /* line 759, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #pricing .pricing-package:nth-child(1) {
+    background-color: #f9418d;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0; }
+  /* line 764, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #pricing .pricing-package:nth-child(2) {
+    padding: 2rem;
+    background-color: #6d56ee;
+    box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1; }
+  /* line 771, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #pricing .pricing-package:nth-child(3) {
+    background-color: #2d3d57;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0; }
+  /* line 776, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #pricing .pricing-package h3 {
+    color: inherit;
+    margin: 0;
+    font-size: 2rem; }
+  /* line 781, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #pricing .pricing-package .package-price {
+    margin: 3.2rem 0 1.6rem; }
+    /* line 783, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #pricing .pricing-package .package-price .price-sum {
+      font-size: 4.4rem;
+      font-weight: bold;
+      letter-spacing: -1.75px;
+      margin: .4rem; }
+    /* line 789, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #pricing .pricing-package .package-price .price-per {
+      opacity: 0.75;
+      font-size: 1.4rem; }
+  /* line 794, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #pricing .pricing-package .package-features {
+    font-size: 1.2rem;
+    min-height: 12.8rem; }
+    /* line 797, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #pricing .pricing-package .package-features li {
+      margin: .8rem 0; }
+  /* line 801, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #pricing .pricing-package .btn {
+    background: rgba(0, 0, 0, 0.15);
+    margin: 0.8rem; }
+
+/* line 806, D:/xampp/htdocs/testing/styles/site.main.scss */
+#pricing .pricing-disclaimer {
+  font-size: 1.4rem;
+  line-height: 1.75;
+  letter-spacing: 0.3px;
+  margin: 0 0 3.2rem; }
+
+/* line 815, D:/xampp/htdocs/testing/styles/site.main.scss */
+#team #intro {
+  padding: 0 0 8rem; }
+  /* line 817, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #team #intro h1 {
+    max-width: 72rem; }
+  /* line 820, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #team #intro p {
+    max-width: 64rem;
+    margin-bottom: 4rem; }
+
+/* line 826, D:/xampp/htdocs/testing/styles/site.main.scss */
+#team #learn-more:before {
+  right: calc(50% - 60rem);
+  left: auto; }
+
+/* line 830, D:/xampp/htdocs/testing/styles/site.main.scss */
+#team #learn-more p {
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.1px; }
+
+/* line 835, D:/xampp/htdocs/testing/styles/site.main.scss */
+#team #learn-more .btn {
+  margin: 4rem 1.6rem 1.6rem; }
+
+/* line 840, D:/xampp/htdocs/testing/styles/site.main.scss */
+#team #founding h1, #team #advisory h1, #team #doctors h1 {
+  margin-top: 8rem auto 4rem; }
+
+/* line 844, D:/xampp/htdocs/testing/styles/site.main.scss */
+#team #founding:before {
+  top: -25%; }
+
+/* line 847, D:/xampp/htdocs/testing/styles/site.main.scss */
+#team #advisory:before {
+  left: auto;
+  right: calc(50% - 72rem);
+  top: -75%; }
+
+/* line 852, D:/xampp/htdocs/testing/styles/site.main.scss */
+#team #doctors:before {
+  top: -50%; }
+
+/* line 855, D:/xampp/htdocs/testing/styles/site.main.scss */
+#team .people-list {
+  margin: 0 auto;
+  max-width: 91.2rem; }
+  /* line 858, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #team .people-list .person {
+    display: flex;
+    align-items: center;
+    margin: 2.4rem 0; }
+  /* line 863, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #team .people-list .person-meta {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 19.2rem;
+    border: solid 1px #f5f5f5;
+    background: #ffffff;
+    border-radius: .8rem;
+    overflow: hidden;
+    margin: 0;
+    margin-right: 7.2rem; }
+  /* line 874, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #team .people-list .person-data {
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: 0.1px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0.8rem 2rem;
+    min-height: 4.8rem; }
+  /* line 886, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #team .people-list .person-data > * {
+    line-height: 1.6rem; }
+  /* line 889, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #team .people-list .person-profession {
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    color: var(--lightText);
+    font-size: 1.2rem; }
+  /* line 895, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #team .people-list .person-quote p {
+    font-size: 1.4rem;
+    line-height: 1.75;
+    letter-spacing: 0.3px;
+    text-align: left; }
+
+/* line 904, D:/xampp/htdocs/testing/styles/site.main.scss */
+.blog-background {
+  background: rgba(243, 246, 247, 0.4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 48rem; }
+
+/* line 913, D:/xampp/htdocs/testing/styles/site.main.scss */
+#blog-index {
+  position: relative;
+  min-height: 48rem; }
+  /* line 917, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #blog-index #blog-index-header:before {
+    top: 25%;
+    height: 51.2rem; }
+  /* line 921, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #blog-index #blog-index-header h1 {
+    margin-top: 3.2rem; }
+  /* line 925, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #blog-index #blog-article-list {
+    padding-bottom: 16rem; }
+    /* line 927, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #blog-index #blog-article-list .article-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -4rem; }
+      /* line 931, D:/xampp/htdocs/testing/styles/site.main.scss */
+      #blog-index #blog-article-list .article-list > * {
+        flex: 0 0 calc(100% / 3); }
+    /* line 935, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #blog-index #blog-article-list .blog-item {
+      display: flex;
+      flex-direction: column;
+      margin: 0 4rem 5.2rem;
+      border-radius: 2rem;
+      background-color: #ffffff;
+      box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.15);
+      overflow: hidden; }
+      /* line 943, D:/xampp/htdocs/testing/styles/site.main.scss */
+      #blog-index #blog-article-list .blog-item:hover {
+        box-shadow: 0 0 0.8rem 0 rgba(109, 86, 238, 0.16); }
+        /* line 945, D:/xampp/htdocs/testing/styles/site.main.scss */
+        #blog-index #blog-article-list .blog-item:hover .blog-item-content h3 {
+          color: var(--accent); }
+      /* line 949, D:/xampp/htdocs/testing/styles/site.main.scss */
+      #blog-index #blog-article-list .blog-item .blog-item-thumbnail {
+        background: rgba(0, 0, 0, 0.15);
+        padding-top: 62.5%;
+        background-position: center;
+        background-size: contain; }
+      /* line 955, D:/xampp/htdocs/testing/styles/site.main.scss */
+      #blog-index #blog-article-list .blog-item .blog-item-content {
+        padding: 2rem; }
+        /* line 957, D:/xampp/htdocs/testing/styles/site.main.scss */
+        #blog-index #blog-article-list .blog-item .blog-item-content h3 {
+          color: inherit;
+          margin: 0 0 2.4rem;
+          max-width: 28rem;
+          transition: color 0.3s; }
+        /* line 963, D:/xampp/htdocs/testing/styles/site.main.scss */
+        #blog-index #blog-article-list .blog-item .blog-item-content p {
+          font-size: 14px;
+          line-height: 1.75;
+          letter-spacing: 0.1px;
+          color: var(--lightText);
+          margin: 0 0 1em; }
+
+/* line 975, D:/xampp/htdocs/testing/styles/site.main.scss */
+#blog {
+  position: relative;
+  min-height: 48rem; }
+  /* line 979, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #blog #blog-index-header h1 {
+    margin-top: 3.2rem; }
+  /* line 984, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #blog #blog-article .article {
+    font-size: 2rem;
+    line-height: 1.75;
+    letter-spacing: 0.2px;
+    padding: 0 6.8rem 8rem;
+    margin: auto;
+    max-width: 84.8rem;
+    color: #4f5a66; }
+    /* line 992, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #blog #blog-article .article p {
+      line-height: inherit;
+      margin-bottom: 2em; }
+    /* line 996, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #blog #blog-article .article .introduction {
+      border-radius: 3.2rem;
+      background-color: #ffffff;
+      border: solid 1px #ededed;
+      padding: 7.2rem 6.8rem;
+      margin-left: -6.8rem;
+      margin-right: -6.8rem; }
+    /* line 1004, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #blog #blog-article .article h2 {
+      font-size: 2em; }
+    /* line 1007, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #blog #blog-article .article h3 {
+      font-size: 1.5em; }
+
+/* line 1015, D:/xampp/htdocs/testing/styles/site.main.scss */
+#establishment #booking .section-header {
+  text-align: left; }
+
+/* line 1019, D:/xampp/htdocs/testing/styles/site.main.scss */
+#establishment #booking .section-header h1 {
+  max-width: 100%;
+  margin: 0; }
+
+/* line 1024, D:/xampp/htdocs/testing/styles/site.main.scss */
+#establishment #booking .section-header .subtitle {
+  max-width: 100%; }
+
+/* line 1028, D:/xampp/htdocs/testing/styles/site.main.scss */
+#establishment #establishment-info {
+  padding: 6.4rem 0 0.8rem; }
+  /* line 1030, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #establishment-info h1 {
+    text-align: center; }
+  /* line 1033, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #establishment-info .establishment-info {
+    display: flex;
+    margin: 4.8rem auto 9.6rem;
+    max-width: 108rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.4px; }
+  /* line 1040, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #establishment-info .establishment-meta {
+    flex: 0 0 32rem; }
+  /* line 1043, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #establishment-info .establishment-meta-info {
+    position: relative;
+    margin: 1.2rem 0;
+    line-height: 1.5;
+    padding-left: 3.2rem; }
+  /* line 1049, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #establishment-info .establishment-meta-info i {
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.6rem; }
+  /* line 1056, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #establishment-info .establishment-meta-info strong {
+    font-weight: 500; }
+  /* line 1059, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #establishment-info .establishment-content {
+    line-height: 3; }
+  /* line 1062, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #establishment-info .establishment-info-photos {
+    display: flex;
+    margin: auto;
+    max-width: 102.4rem; }
+    /* line 1066, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #establishment #establishment-info .establishment-info-photos .photo-wrapper {
+      flex: 1 1 100%;
+      margin: 1.6rem; }
+    /* line 1070, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #establishment #establishment-info .establishment-info-photos .photo {
+      background: rgba(0, 0, 0, 0.05);
+      background-position: center;
+      background-size: cover;
+      padding-top: 75%; }
+
+/* line 1079, D:/xampp/htdocs/testing/styles/site.main.scss */
+#establishment #testimonials {
+  padding: 4rem 0; }
+
+/* line 1083, D:/xampp/htdocs/testing/styles/site.main.scss */
+#establishment #steps {
+  position: relative; }
+
+/* line 1087, D:/xampp/htdocs/testing/styles/site.main.scss */
+#establishment #steps:before {
+  content: '';
+  background-color: #f3f6f7;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%; }
+
+/* line 1097, D:/xampp/htdocs/testing/styles/site.main.scss */
+#establishment #can-treat {
+  padding: 2rem 0 12rem;
+  background-color: #f3f6f7; }
+
+/* line 1103, D:/xampp/htdocs/testing/styles/site.main.scss */
+#establishment #we-can-also .we-can-also {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.15);
+  border: solid 2px var(--accent);
+  max-width: 102.4rem;
+  padding: 2.4rem 4rem;
+  margin: auto;
+  transform: translate(0, -50%); }
+
+/* line 1115, D:/xampp/htdocs/testing/styles/site.main.scss */
+#establishment #we-can-also .we-can-also-content {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  color: var(--accent);
+  text-align: center; }
+
+/* line 1123, D:/xampp/htdocs/testing/styles/site.main.scss */
+#establishment #we-can-also img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100%;
+  margin-right: 4rem; }
+
+/* line 1131, D:/xampp/htdocs/testing/styles/site.main.scss */
+#establishment #steps-additional {
+  padding-top: 0; }
+  /* line 1133, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #steps-additional .container {
+    max-width: 84rem; }
+  /* line 1136, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #steps-additional a {
+    margin-top: 2rem; }
+
+/* line 1142, D:/xampp/htdocs/testing/styles/site.main.scss */
+#page-footer {
+  overflow: hidden; }
+  /* line 1144, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #page-footer #page-quick-access {
+    display: flex;
+    padding: 6rem 0 2rem; }
+    /* line 1147, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #page-footer #page-quick-access section {
+      flex: 0 0 22.4rem; }
+    /* line 1150, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #page-footer #page-quick-access h3 {
+      font-weight: normal;
+      color: inherit; }
+    /* line 1154, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #page-footer #page-quick-access a {
+      display: block;
+      font-size: 1.4rem;
+      letter-spacing: 0.1px;
+      padding: 0.8rem 0; }
+  /* line 1161, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #page-footer #page-social {
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    /* line 1166, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #page-footer #page-social .nav-social {
+      display: flex;
+      margin: -2.4rem; }
+      /* line 1169, D:/xampp/htdocs/testing/styles/site.main.scss */
+      #page-footer #page-social .nav-social a {
+        display: inline-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.6rem;
+        height: 3.6rem;
+        border-radius: 100%;
+        font-size: 2rem;
+        color: var(--pageBackground);
+        background: var(--text);
+        margin: 2.4rem; }
+  /* line 1184, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #page-footer #page-legal {
+    background-color: #f3f6f7;
+    color: #62686a;
+    padding: 4.8rem 0;
+    font-size: 1.2rem;
+    line-height: 2.5;
+    letter-spacing: 0.1px; }
+    /* line 1191, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #page-footer #page-legal a {
+      display: block;
+      font-weight: 500;
+      text-decoration: underline;
+      margin-bottom: 2.4rem; }
+    /* line 1197, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #page-footer #page-legal div {
+      line-height: 2rem; }
+
+/* line 1203, D:/xampp/htdocs/testing/styles/site.main.scss */
+hr {
+  border: none;
+  border-bottom: 1px solid rgba(72, 92, 120, 0.15); }
+
+/* line 1208, D:/xampp/htdocs/testing/styles/site.main.scss */
+hr.dot {
+  display: inline-block;
+  font-size: .8rem;
+  width: 1em;
+  height: 1em;
+  margin: 0 2em;
+  opacity: .35;
+  border-radius: 100%;
+  background: currentColor; }
+
+/* line 1219, D:/xampp/htdocs/testing/styles/site.main.scss */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: var(--accentText);
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  line-height: 4rem;
+  padding: 0 3.2rem;
+  transition: transform 0.3s ease-out; }
+  /* line 1230, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .btn:hover {
+    transform: scale(1.05); }
+  /* line 1233, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .btn:active {
+    transform: scale(0.95); }
+  /* line 1236, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .btn span {
+    line-height: inherit; }
+  /* line 1239, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .btn i:first-child {
+    margin-right: 0.8em;
+    margin-left: -0.4em; }
+  /* line 1243, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .btn i:last-child {
+    margin-left: 0.8em;
+    margin-right: -0.4em; }
+  /* line 1247, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .btn.s-rounded {
+    border-radius: 12.8rem; }
+  /* line 1250, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .btn.s-inverted {
+    background: var(--accentText);
+    color: var(--accent); }
+  /* line 1254, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .btn.s-link {
+    background: transparent;
+    color: var(--accent);
+    font-weight: 500; }
+  /* line 1259, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .btn.s-large {
+    font-size: 2rem;
+    line-height: 4.8rem;
+    padding: 0 4rem; }
+
+/* line 1265, D:/xampp/htdocs/testing/styles/site.main.scss */
+page {
+  display: block;
+  overflow: hidden;
+  transform: translate(0, 12rem);
+  opacity: 0;
+  transition: transform 0.9s, opacity 0.9s; }
+
+/* line 1272, D:/xampp/htdocs/testing/styles/site.main.scss */
+.page-loaded page {
+  transform: translate(0);
+  opacity: 1; }
+
+/* line 1276, D:/xampp/htdocs/testing/styles/site.main.scss */
+section {
+  position: relative; }
+  /* line 1279, D:/xampp/htdocs/testing/styles/site.main.scss */
+  section h1, section h2, section h3 {
+    color: var(--accent);
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 2.4rem auto; }
+  /* line 1285, D:/xampp/htdocs/testing/styles/site.main.scss */
+  section h1 {
+    font-size: 4rem;
+    letter-spacing: 0.1px; }
+  /* line 1292, D:/xampp/htdocs/testing/styles/site.main.scss */
+  section h3 {
+    font-size: 2rem;
+    letter-spacing: 0.5px; }
+  /* line 1296, D:/xampp/htdocs/testing/styles/site.main.scss */
+  section.text-section {
+    text-align: center; }
+    /* line 1298, D:/xampp/htdocs/testing/styles/site.main.scss */
+    section.text-section .section-header {
+      padding: 4rem 0 4.8rem; }
+      /* line 1300, D:/xampp/htdocs/testing/styles/site.main.scss */
+      section.text-section .section-header h1 {
+        font-weight: bold;
+        margin: 0 auto 1.6rem;
+        max-width: 64rem; }
+    /* line 1306, D:/xampp/htdocs/testing/styles/site.main.scss */
+    section.text-section .content p {
+      font-size: 2rem;
+      line-height: 2;
+      letter-spacing: 0.5px;
+      text-align: center;
+      max-width: 90rem;
+      margin: 0 auto 2rem; }
+  /* line 1315, D:/xampp/htdocs/testing/styles/site.main.scss */
+  section .subtitle {
+    color: var(--lightText);
+    font-size: 2rem;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    margin: 0 auto;
+    max-width: 73.6rem; }
+  /* line 1323, D:/xampp/htdocs/testing/styles/site.main.scss */
+  section .logos-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto; }
+    /* line 1328, D:/xampp/htdocs/testing/styles/site.main.scss */
+    section .logos-list img {
+      max-height: 6rem;
+      margin: 0.8rem; }
+
+@media screen and (max-width: 1280px) {
+  /* line 1336, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .steps .steps-list {
+    margin-left: -1.6rem;
+    margin-right: -1.6rem; }
+  /* line 1340, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .steps .steps-list li {
+    margin-left: 1.6rem;
+    margin-right: 1.6rem; }
+  /* line 1344, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #blog-index #blog-article-list .article-list {
+    margin-left: -1.6rem;
+    margin-right: -1.6rem; }
+  /* line 1348, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #blog-index #blog-article-list .blog-item {
+    margin-left: 1.6rem;
+    margin-right: 1.6rem; }
+  /* line 1352, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #contact-doctors #call-to-action h1 {
+    font-size: 2.4rem;
+    max-width: 72rem; }
+  /* line 1356, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #contact-business #talk-to-us ul {
+    flex-direction: column;
+    max-width: 36rem;
+    margin: 2rem auto 8rem; }
+  /* line 1361, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #contact-business #talk-to-us ul li {
+    flex: 1 1 auto;
+    margin: 1.6rem 0; }
+  /* line 1365, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .with-media .container {
+    flex-direction: column;
+    align-items: center !important; }
+  /* line 1369, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .with-media .container .content {
+    text-align: center; }
+  /* line 1372, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .with-media .media-wrapper {
+    width: 100%;
+    margin: 1.6rem 0 3.2rem; }
+  /* line 1376, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .with-media .content .btn {
+    margin: 3.2rem auto; }
+  /* line 1379, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #logos-qa .logos-list {
+    justify-content: space-around; }
+  /* line 1382, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #logos-media .logos-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 60rem; }
+  /* line 1387, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #logos-media .logos-list img {
+    margin: 1.6rem; } }
+
+@media screen and (max-width: 1024px) {
+  /* line 1393, D:/xampp/htdocs/testing/styles/site.main.scss */
+  html {
+    font-size: 56.25%; }
+  /* line 1396, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #establishment-info .establishment-content {
+    line-height: 2.5; }
+  /* line 1399, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .steps .steps-list {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40rem; }
+  /* line 1405, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .steps .steps-list li {
+    margin-bottom: 3.2rem; }
+  /* line 1408, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .treat-section .treat-list li {
+    flex: 1 1 50%; }
+  /* line 1411, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #steps-additional .steps-list {
+    flex-direction: row;
+    max-width: 100%; }
+  /* line 1415, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #blog-index #blog-article-list .article-list > * {
+    flex: 0 0 50%; }
+  /* line 1418, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #reviews .testimonials-reviews .review .review-content {
+    font-size: 1.6rem; }
+  /* line 1421, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #contact #raise-complaint .container {
+    flex-direction: column; }
+  /* line 1424, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #contact #raise-complaint a {
+    margin-top: 3.2rem; }
+  /* line 1427, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #how-it-works .steps .steps-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 64rem;
+    margin: 0 auto; }
+  /* line 1433, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #how-it-works .steps .steps-list li {
+    flex: 0 0 28rem;
+    margin: 4rem 1.6rem; }
+  /* line 1437, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #how-it-works #clinical-station-diagram .clinical-station-diagram {
+    flex-direction: column; }
+  /* line 1440, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-list {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-around; }
+  /* line 1445, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-image-wrapper {
+    flex: 1 1 auto; }
+  /* line 1448, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-list li {
+    flex-direction: column !important;
+    text-align: center;
+    flex: 1 1 100%;
+    margin: 0 0 1.6rem; }
+  /* line 1454, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-list .icon {
+    margin: 0 auto 1.6rem; } }
+
+/* line 1459, D:/xampp/htdocs/testing/styles/site.main.scss */
+#show-menu {
+  color: var(--lightText);
+  font-size: 2rem;
+  padding: 0.8rem;
+  display: none; }
+
+/* line 1465, D:/xampp/htdocs/testing/styles/site.main.scss */
+.mobile-menu-header {
+  display: none; }
+
+@media screen and (max-width: 640px) {
+  /* line 1470, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #establishment-info .establishment-info {
+    flex-direction: column;
+    margin-bottom: 4.8rem; }
+  /* line 1474, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #establishment-info .establishment-meta {
+    flex: 1 1 auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.6rem; }
+  /* line 1479, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #establishment-info .establishment-info-photos {
+    flex-direction: column; }
+  /* line 1482, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #logos-qa .logos-list {
+    flex-wrap: wrap;
+    max-width: 34rem;
+    justify-content: space-between; }
+  /* line 1487, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #logos-qa .logos-list img:nth-child(1) {
+    content: url(/assets/images/logo/logo-st-sm.png); }
+  /* line 1490, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #logos-qa .logos-list img:nth-child(2) {
+    content: url(/assets/images/logo/logo-gmc-sm.png); }
+  /* line 1493, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .treat-section .treat-list li {
+    flex: 1 1 auto;
+    min-height: 9.6rem; }
+  /* line 1497, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #we-can-also .we-can-also {
+    transform: translate(0, -8rem);
+    flex-direction: column; }
+  /* line 1501, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #we-can-also img {
+    margin: 0 0 2rem; }
+  /* line 1504, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #establishment #steps-additional .steps-list {
+    flex-direction: column; }
+  /* line 1507, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #blog #blog-article .article {
+    font-size: 1.6rem;
+    padding-left: 2rem;
+    padding-right: 2rem; }
+  /* line 1512, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #blog #blog-article .article .introduction {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding: 4rem 2rem; }
+  /* line 1517, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #blog-index #blog-article-list .article-list > * {
+    flex: 0 0 100%; }
+  /* line 1520, D:/xampp/htdocs/testing/styles/site.main.scss */
+  section h1 {
+    font-size: 3.2rem; }
+  /* line 1523, D:/xampp/htdocs/testing/styles/site.main.scss */
+  section .subtitle {
+    font-size: 1.8rem; }
+  /* line 1526, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #team #intro p {
+    font-size: 1.6rem; }
+  /* line 1529, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #team #learn-more .btn {
+    margin: 4rem 0.8rem 0;
+    font-size: 1.6rem;
+    line-height: 4rem;
+    padding: 0 2rem; }
+  /* line 1535, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #team .people-list .person {
+    flex-direction: column; }
+  /* line 1538, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #team .people-list .person-meta {
+    flex: 1 1 auto;
+    flex-direction: row;
+    margin: 0 0 1.5rem; }
+  /* line 1543, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #team .people-list .person-photo {
+    flex: 0 0 8rem; }
+  /* line 1548, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #pricing .pricing-list {
+    flex-direction: column;
+    align-items: center; }
+  /* line 1552, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #pricing .pricing-package {
+    border-radius: .8rem !important;
+    color: #ffffff;
+    padding: 2rem 0.8rem !important;
+    margin: 0 0 1.6rem;
+    min-width: 28rem; }
+    /* line 1558, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #pricing .pricing-package:nth-child(2) {
+      order: -1; }
+    /* line 1561, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #pricing .pricing-package .package-features {
+      min-height: 0; }
+    /* line 1564, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #pricing .pricing-package .package-price {
+      margin: 1.6rem; }
+  /* line 1568, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #pricing .pricing-disclaimer {
+    margin: auto;
+    max-width: 26rem; }
+  /* line 1574, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #reviews #intro p {
+    font-size: 1.6rem; }
+  /* line 1577, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #reviews .testimonials-reviews .review {
+    flex-direction: column; }
+    /* line 1579, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #reviews .testimonials-reviews .review .review-meta {
+      flex: 1 1 auto; }
+    /* line 1582, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #reviews .testimonials-reviews .review .review-content {
+      text-align: center;
+      margin-top: 1.6rem; }
+  /* line 1588, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .testimonials {
+    padding-bottom: 8rem; }
+  /* line 1591, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #what-we-treat #intro p {
+    font-size: 1.6rem; }
+  /* line 1594, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #what-we-treat #call-to-action p {
+    font-size: 2rem;
+    line-height: 1.5; }
+  /* line 1598, D:/xampp/htdocs/testing/styles/site.main.scss */
+  section.text-section .content p {
+    font-size: 1.6rem;
+    letter-spacing: 0.1px; }
+  /* line 1602, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #contact-doctors #call-to-action h1 {
+    font-size: 2rem;
+    line-height: 1.5; }
+  /* line 1606, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #contact-business #talk-to-us ul {
+    margin: 0 auto 4rem; }
+  /* line 1609, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #contact-business #talk-to-us {
+    padding-bottom: 8rem; }
+  /* line 1612, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .with-media .content p {
+    font-size: 1.6rem; }
+  /* line 1615, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .with-media {
+    padding-bottom: 4.8rem; }
+  /* line 1618, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .with-media .media-wrapper {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem; }
+  /* line 1622, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .with-media .media-wrapper .media-content .video-player-play {
+    font-size: 8rem; }
+  /* line 1625, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .input-row {
+    flex-direction: column; }
+  /* line 1628, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .input-row.input-buttons-row > * {
+    margin: 0; }
+  /* line 1631, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #contact #raise-complaint .container p {
+    line-height: 1.5; }
+  /* line 1636, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #how-it-works .steps .steps-list {
+    padding-left: 3.2rem;
+    margin-right: -0.8rem; }
+    /* line 1639, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #how-it-works .steps .steps-list .step-icon {
+      left: 0;
+      top: 50%; }
+    /* line 1643, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #how-it-works .steps .steps-list li {
+      padding: 1.6rem;
+      padding-left: 6rem;
+      flex: 1 1 auto;
+      text-align: left;
+      margin: 2rem 1.6rem; }
+  /* line 1652, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-image-wrapper {
+    order: -1;
+    margin: 0 0 3.2rem; }
+  /* line 1656, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-list {
+    display: block;
+    margin: 0; }
+    /* line 1659, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-list li {
+      flex-direction: row !important;
+      text-align: left;
+      height: auto; }
+    /* line 1664, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #how-it-works #clinical-station-diagram .clinical-station-diagram .diagram-list .icon {
+      margin: 0 1.6rem; }
+  /* line 1669, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #how-it-works #logos-qa {
+    padding-top: 6.4rem; }
+  /* line 1675, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #call-to-action {
+    padding: 4rem 0 6rem;
+    font-size: 1.6rem; }
+  /* line 1679, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #call-to-action p {
+    line-height: 2;
+    margin: auto;
+    max-width: 32rem; }
+  /* line 1684, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #logos-media {
+    display: none; }
+  /* line 1687, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .dots-background:before {
+    left: -50%; }
+  /* line 1690, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .hide-mobile {
+    display: none; }
+  /* line 1693, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #home #video.with-media .content p {
+    font-size: 2rem; }
+  /* line 1696, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .testimonials .testimonials-quotes p {
+    font-size: 1.6rem;
+    margin-bottom: 4rem; }
+  /* line 1701, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .testimonials .testimonials-quotes footer .testimony-avatar {
+    width: 9.6rem;
+    border-width: 0.2rem; }
+  /* line 1706, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .testimonials .testimonials-quotes footer {
+    font-size: 1.3rem;
+    min-width: 12.8rem; }
+  /* line 1712, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #page-footer .container {
+    padding: 0 2.4rem; }
+  /* line 1715, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #page-footer #page-quick-access {
+    flex-wrap: wrap; }
+    /* line 1717, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #page-footer #page-quick-access section {
+      flex: 0 0 18rem; }
+    /* line 1720, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #page-footer #page-quick-access section:nth-child(2) {
+      flex: 0 0 12rem; }
+    /* line 1723, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #page-footer #page-quick-access h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem; }
+  /* line 1728, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #page-footer #page-social {
+    flex-direction: row;
+    flex-wrap: wrap; }
+    /* line 1731, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #page-footer #page-social .nav-social {
+      flex: 1 1 100%;
+      margin: -1.6rem -1.2rem 1.6rem;
+      order: -1; }
+    /* line 1736, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #page-footer #page-social .nav-social a {
+      margin: 1.2rem; }
+  /* line 1740, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #page-footer #page-legal div {
+    line-height: 2; }
+  /* line 1745, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #page-header .page-logo {
+    background-size: 12.8rem 4rem;
+    width: 12.8rem;
+    height: 4rem; }
+  /* line 1750, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #page-header #show-menu {
+    display: block; }
+  /* line 1753, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #page-header .nav-main {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 1.2rem 0.8rem;
+    border-radius: 1.6rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.15);
+    max-height: 4.8rem;
+    overflow: hidden;
+    opacity: 0; }
+    /* line 1765, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #page-header .nav-main > a {
+      display: block;
+      margin: 0 1.2rem 1.6rem;
+      padding: 1.2rem 1.6rem;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.1px;
+      border-radius: 0.4rem;
+      opacity: 0;
+      transition: opacity 0.3s ease; }
+      /* line 1775, D:/xampp/htdocs/testing/styles/site.main.scss */
+      #page-header .nav-main > a.active, #page-header .nav-main > a:hover {
+        background: rgba(0, 0, 0, 0.025); }
+  /* line 1780, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #page-header .mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem 0.8rem 1.6rem; }
+    /* line 1785, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #page-header .mobile-menu-header a {
+      margin: 0; }
+    /* line 1788, D:/xampp/htdocs/testing/styles/site.main.scss */
+    #page-header .mobile-menu-header button {
+      color: var(--accent);
+      font-size: 2.4rem;
+      padding: 0.8rem; }
+  /* line 1794, D:/xampp/htdocs/testing/styles/site.main.scss */
+  #page-header .nav-main {
+    pointer-events: none;
+    transition: opacity 0.3s ease 0.3s, max-height 0.6s ease; }
+  /* line 1799, D:/xampp/htdocs/testing/styles/site.main.scss */
+  .menu-shown #page-header .nav-main {
+    pointer-events: all;
+    max-height: 36rem;
+    opacity: 1;
+    transition: opacity 0.3s ease, max-height 0.6s ease 0.3s; }
+    /* line 1804, D:/xampp/htdocs/testing/styles/site.main.scss */
+    .menu-shown #page-header .nav-main > a {
+      opacity: 1;
+      transition: opacity 0.3s ease 0.6s; } }
+
+/*# sourceMappingURL=site.main.css.map */
+.vimeo{
+  max-width:640px;
+  width:100%;
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>UK Pharmacies</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+			html, body {
+				height:100%;
+				margin: 0;
+			}
+			#page_container {
+				height:100%; position: relative;
+			}
+			#legend_button {
+				position: absolute; top: 80px; left: 10px; z-index: 99;
+			}
+			#legend {
+				position: absolute; top: 110px; left: 10px; z-index: 99; width: 50px; height: 100px;
+			}
+			#UKmap {
+				height:100%;
+			}
+		</style>
+    </head>
+    <body>
+		<div id="page_container">
+			<button class="active btn-primary" id="legend_button" data-toggle="collapse" data-target="#legend">Legend</button>
+			<div id="legend" class="collapse">
+				<img src="legend.jpg">
+			</div>
+			<div id="UKmap"></div>
+		</div>
+        <script>
+		var map, layer;
+			function initMap() {
+				map = new google.maps.Map(document.getElementById('UKmap'), {
+					center: {lat: 55.3, lng: -3.4715817557},
+					zoom: 6
+				});
+				layer = new google.maps.FusionTablesLayer({
+					query: {
+						select: 'col13',
+						from: '1v1bam98PdKDGuQk5rphsfRXqKsTOe__jBzuW7ioP'
+					},
+					options: {
+						styleId: 2,
+						templateId: 2
+					}
+				});
+				layer.setMap(map);
+			}
+    </script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAO85i8VMsi3fKBfIqggp98Qy_O35jsPY&callback=initMap"
+    async defer></script>
+    </body>
+</html>

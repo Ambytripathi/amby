@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /fuel/
+Disallow: /user/ajax_check_login
+Disallow: /*?utm_
+User-Agent: Googlebot
+Allow: /*.js
+Allow: /*.css
+
+

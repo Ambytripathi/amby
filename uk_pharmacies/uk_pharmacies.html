@@ -1,0 +1,452 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>UK Pharmacies</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="js/themes/default/style.min.css"/>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jstree.min.js"></script>
+		<style>
+			html, body {
+				height:100%;
+				margin: 0;
+			}
+			#page_container {
+				height:100%; position: relative;
+			}
+			#filter_button {
+				position: absolute; top: 80px; left: 10px; z-index: 99;
+			}
+			#filter {
+				overflow: scroll; position: absolute; top: 110px; left: 10px; z-index: 99; width: 380px; height: 540px; background: grey;
+			}
+			#legend_button1 {
+				position: absolute; top: 10px; left: 120px; z-index: 99;
+			}
+			#legend_button2 {
+				position: absolute; top: 10px; left: 300px; z-index: 99;
+			}
+			#legend1 {
+				position: absolute; top: 40px; left: 120px; z-index: 99; width: 50px; height: 120px;
+			}
+			#legend2 {
+				position: absolute; top: 40px; left: 300px; z-index: 99; width: 50px; height: 120px;
+			}
+			#UKmap {
+				height:100%;
+			}
+			#myModal {
+				background-color: grey;
+			}
+			#description {
+				font-family: Roboto;
+				font-size: 15px;
+				font-weight: 300;
+			}
+
+			#infowindow-content .title {
+				font-weight: bold;
+			}
+
+			#infowindow-content {
+				display: none;
+			}
+
+			#infowindow-content {
+				display: inline;
+			}
+
+			.pac-card {
+				margin: 10px 10px 0 0;
+				border-radius: 2px 0 0 2px;
+				box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				outline: none;
+				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+				background-color: #fff;
+				font-family: Roboto;
+			}
+
+			#pac-container {
+				padding-bottom: 12px;
+				margin-right: 12px;
+			}
+
+			.pac-controls {
+				display: inline-block;
+				padding: 5px 11px;
+			}
+
+			.pac-controls label {
+				font-family: Roboto;
+				font-size: 13px;
+				font-weight: 300;
+			}
+
+			#pac-input {
+				background-color: #fff;
+				font-family: Roboto;
+				font-size: 15px;
+				font-weight: 300;
+				margin-left: 12px;
+				padding: 0 11px 0 13px;
+				text-overflow: ellipsis;
+				width: 400px;
+			}
+
+			#pac-input:focus {
+				border-color: #4d90fe;
+			}
+
+			#title {
+				color: #fff;
+				background-color: #4d90fe;
+				font-size: 25px;
+				font-weight: 500;
+				padding: 6px 12px;
+			}
+		</style>
+		<script type="text/javascript">
+			$(function () {
+				var ownerData = [
+					{"id": "Top 20", "parent": "#", "text": "<strong>Top 20</strong>", "state": {opened: true, selected: false}},
+					{"id": "Boots UK Limited" , "parent": "Top 20", "text": "Boots UK Limited", "state": {selected: true}, "li_attr": {rel: "a"}, "type" : "b_blue"},
+					{"id": "Lloyds Pharmacy Ltd" , "parent": "Top 20", "text": "Lloyds Pharmacy Ltd", "state": {selected: true}, "type" : "grn_stars"},
+					{"id": "L Rowland & Co (Retail) Ltd" , "parent": "Top 20", "text": "L Rowland & Co (Retail) Ltd", "state": {selected: true}, "type" : "orange_stars"},
+    				{"id": "Bestway National Chemists Limited" , "parent": "Top 20", "text": "Bestway National Chemists Limited", "state": {selected: true}, "type" : "pink_blank"},
+    				{"id": "Tesco Stores Ltd" , "parent": "Top 20", "text": "Tesco Stores Ltd", "state": {selected: true}, "type" : "t"},
+    				{"id": "Asda Stores Ltd" , "parent": "Top 20", "text": "Asda Stores Ltd", "state": {selected: true}, "type" : "a"},
+    				{"id": "Bestway Panacea Healthcare Limited" , "parent": "Top 20", "text": "Bestway Panacea Healthcare Limited", "state": {selected: true}, "type" : "pink_blank"},
+    				{"id": "Day Lewis Plc" , "parent": "Top 20", "text": "Day Lewis Plc", "state": {selected: true}, "type" : "purple_blank"},
+    				{"id": "Superdrug Stores Plc" , "parent": "Top 20", "text": "Superdrug Stores Plc", "state": {selected: true}, "type" : "ylw_square"},
+    				{"id": "Gorgemead Ltd" , "parent": "Top 20", "text": "Gorgemead Ltd", "state": {selected: true}, "type" : "ltblu_blank"},
+    				{"id": "W M Morrison Supermarkets Plc" , "parent": "Top 20", "text": "W M Morrison Supermarkets Plc", "state": {selected: true}, "type" : "w"},
+    				{"id": "Paydens Ltd" , "parent": "Top 20", "text": "Paydens Ltd", "state": {selected: true}, "type" : "capital_small_highlight"},
+    				{"id": "PCT Healthcare Limited" , "parent": "Top 20", "text": "PCT Healthcare Limited", "state": {selected: true}, "type" : "webcam"},
+    				{"id": "H. I. Weldrick Ltd" , "parent": "Top 20", "text": "H. I. Weldrick Ltd", "state": {selected: true}, "type" : "small_green"},
+    				{"id": "Dudley Taylor Pharmacies Ltd" , "parent": "Top 20", "text": "Dudley Taylor Pharmacies Ltd", "state": {selected: true}, "type" : "small_blue"},
+    				{"id": "Waremoss Ltd" , "parent": "Top 20", "text": "Waremoss Ltd", "state": {selected: true}, "type" : "small_purple"},
+    				{"id": "Lincoln Co-operative Chemists Ltd" , "parent": "Top 20", "text": "Lincoln Co-operative Chemists Ltd", "state": {selected: true}, "type" : "measle_brown"},
+    				{"id": "WR Evans Healthcare Ltd" , "parent": "Top 20", "text": "WR Evans Healthcare Ltd", "state": {selected: true}, "type" : "measle_grey"},
+    				{"id": "Rajja Ltd" , "parent": "Top 20", "text": "Rajja Ltd", "state": {selected: true}, "type" : "measle_white"},
+    				{"id": "West Midlands Co-operative Chemists Ltd" , "parent": "Top 20", "text": "West Midlands Co-operative Chemists Ltd", "state": {selected: true}, "type" : "measle_turquoise"},
+					{"id": "Others", "parent": "#", "text": "<strong>Others</strong>", "state": {opened: true, selected: true}, "type" : "wht_stars"},
+					{"id": "IMDS10", "parent": "#", "text": "<strong>IMDS10</strong>", "state": {opened: true, selected: true}}
+				];
+				var tree = $('#filter').jstree({
+					'core': {
+						'data': ownerData
+					},
+					"types" : {
+						"default" : {
+							"icon" : "glyphicon glyphicon-star-empty"
+						},
+						"b_blue" : {
+							"icon" : "icons/b_blue.png"
+						},
+						"grn_stars" : {
+							"icon" : "icons/grn_stars.png"
+						},
+						"orange_stars" : {
+							"icon" : "icons/orange_stars.png"
+						},
+						"pink_blank" : {
+							"icon" : "icons/pink_blank.png"
+						},
+						"t" : {
+							"icon" : "icons/t.png"
+						},
+						"a" : {
+							"icon" : "icons/a.png"
+						},
+						"pink_blank" : {
+							"icon" : "icons/pink_blank.png"
+						},
+						"purple_blank" : {
+							"icon" : "icons/purple_blank.png"
+						},
+						"ylw_square" : {
+							"icon" : "icons/ylw_square.png"
+						},
+						"ltblu_blank" : {
+							"icon" : "icons/ltblu_blank.png"
+						},
+						"w" : {
+							"icon" : "icons/w.png"
+						},
+						"capital_small_highlight" : {
+							"icon" : "icons/capital_small_highlight.png"
+						},
+						"webcam" : {
+							"icon" : "icons/webcam.png"
+						},
+						"small_green" : {
+							"icon" : "icons/small_green.png"
+						},
+						"small_blue" : {
+							"icon" : "icons/small_blue.png"
+						},
+						"small_purple" : {
+							"icon" : "icons/small_purple.png"
+						},
+						"measle_brown" : {
+							"icon" : "icons/measle_brown.png"
+						},
+						"measle_grey" : {
+							"icon" : "icons/measle_grey.png"
+						},
+						"measle_white" : {
+							"icon" : "icons/measle_white.png"
+						},
+						"measle_turquoise" : {
+							"icon" : "icons/measle_turquoise.png"
+						},
+						"wht_stars" : {
+							"icon" : "icons/wht_stars.png"
+						}
+					},
+					'plugins' : [ 'wholerow', 'checkbox', 'types' ]
+				});
+				tree.on('click', function (e) {
+					query = "'PharmacyRegistrationNumber' > 1";
+					var data = $('#filter').jstree(true).get_json('#', { flat: true, no_data : true, no_id : true,  no_li_attr : true, no_a_attr : true, no_children : false });
+					var datas = JSON.stringify(data);
+					var datast = data.map(function(a) {return a.state;});
+					for (var i=0; i < data.length ; ++i)
+						if (datast[i].selected === false) {
+							if (data[i].text === "<strong>Others</strong>") {
+								query += " AND 'Style' NOT MATCHES 'wht_stars'";
+							} else if (data[i].text === "L Rowland & Co (Retail) Ltd") {
+								query += " AND 'Style' NOT MATCHES 'orange_stars'";
+							} else if (data[i].text === "<strong>IMDS10</strong>") {
+								layer1.setMap(null);	
+							} else {
+								query += " AND 'OwnerName' NOT MATCHES '" + data[i].text + "'";
+							}
+						}
+					layer.setOptions({
+						query: {
+							select: 'col13',
+							from: '1v1bam98PdKDGuQk5rphsfRXqKsTOe__jBzuW7ioP',
+							where: query
+						}
+					});
+					for (var i=0; i < data.length ; ++i)
+						if (datast[i].selected === true) {
+							//var imds = $.inArray("<strong>IMDS10</strong>", data[i].text);
+							//alert(imds);
+							//if (imds === true ) {layer1.setMap(null);} else {}
+							//alert(data[i].text);
+							if (data[i].text === "<strong>IMDS10</strong>") {
+								layer1.setMap(map);
+						//	} else {
+						//		layer1.setMap(null);
+							}
+						}
+				});
+				
+				$('.btn-login-submit').click(function(e){
+					e.preventDefault();
+					var element = $(this).parent().parent().parent();
+					lusername = $("#lusername").val();
+					var lpassword = $("#lpassword").val();
+					$.post("login.php", { lusername: lusername, lpassword: lpassword }).done(function(data) {
+						if (data == "OK!" ){
+							$('.login-box').fadeOut(function(){
+								//$('#myModal').remove();
+								//$('#myModal').fadeIn();
+								$("#myModal").modal('hide');
+							});
+						} else {
+							alert("Wrong credentials (J)!");
+						}
+					});
+				});
+			});
+		</script>
+    </head>
+    <body>
+		<div id="page_container">
+			<div id="myModal" class="modal fade">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="well login-box">
+					<form action="" method="post" target="_blank">
+						<legend>Login</legend>
+						<div class="form-group">
+							<label for="lusername">E-mail or Username</label>
+							<input name="lusername" id="lusername" value='' placeholder="E-mail or Username" type="text" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label for="lpassword">Password</label>
+							<input name="lpassword" id="lpassword" value='' placeholder="Password" type="text" class="form-control" />
+						</div>
+						<div class="form-group text-center">
+							<button class="btn btn-danger btn-cancel-action">Cancel</button>
+							<input type="submit" class="btn btn-success btn-login-submit" value="Login" />
+						</div>
+					</form>
+				</div>
+							</div>
+						</div>
+			</div>
+			<button class="active btn-primary" id="filter_button" data-toggle="collapse" data-target="#filter">Filter</button>
+			<div id="filter" class="collapse" <!-- class="pre-scrollable collapse" -->>
+			</div>
+			<button class="active btn-primary" id="legend_button1" data-toggle="collapse" data-target="#legend1">Legend Markers</button>
+			<div id="legend1" class="collapse">
+				<img src="legend.jpg">
+			</div>
+			<button class="active btn-primary" id="legend_button2" data-toggle="collapse" data-target="#legend2">Legend Polygons</button>
+			<div id="legend2" class="collapse">
+				<img src="English Indices of Deprivation 2010_legend.png">
+			</div>
+			<div id="UKmap"></div>
+			<div class="pac-card" id="pac-card">
+				<div>
+					<div id="title">Autocomplete search</div>
+				</div>
+				<div id="pac-container">
+					<input id="pac-input" type="text"placeholder="Enter a location">
+				</div>
+			</div>
+			<div id="infowindow-content">
+				<img src="" width="16" height="16" id="place-icon">
+				<span id="place-name"  class="title"></span><br>
+				<span id="place-address"></span>
+			</div>
+		</div>
+        <script>
+		var map, layer;
+		var query = "";
+			function initMap() {
+				map = new google.maps.Map(document.getElementById('UKmap'), {
+					center: {lat: 55.3, lng: -3.4715817557},
+					zoom: 6,
+					scaleControl: true
+				});
+				layer1 = new google.maps.FusionTablesLayer({
+					heatmap: { enabled: false },
+					query: {
+						select: "col0",
+						from: "100WSGf52CY0pOLzq7Wu68b8ChXRQso_sbEPvZhhV",
+						where: ""
+					},
+					options: {
+						styleId: 345,
+						templateId: 382
+					}
+				});
+				layer1.setMap(map);
+				layer = new google.maps.FusionTablesLayer({
+					query: {
+						select: 'col13',
+						from: '1v1bam98PdKDGuQk5rphsfRXqKsTOe__jBzuW7ioP',
+						where: query
+					},
+					options: {
+						styleId: 2,
+						templateId: 2
+					}
+				});
+				layer.setMap(map);
+				layer2 = new google.maps.FusionTablesLayer({
+					heatmap: { enabled: false },
+					query: {
+						select: "col2",
+						from: "1Rt4FcBs6zBXFikSIhU6aUAiEUqV50fkCKI5o5-sG",
+						where: ""
+					},
+					options: {
+						styleId: 2,
+						templateId: 2
+					}
+				});
+				layer2.setMap(map);				
+				//autocomplete 
+				var card = document.getElementById('pac-card');
+				var input = document.getElementById('pac-input');
+				//var types = document.getElementById('type-selector');
+				//var strictBounds = document.getElementById('strict-bounds-selector');
+				map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
+
+				var autocomplete = new google.maps.places.Autocomplete(input);
+
+				// Bind the map's bounds (viewport) property to the autocomplete object,
+				// so that the autocomplete requests use the current map bounds for the
+				// bounds option in the request.
+				autocomplete.bindTo('bounds', map);
+
+				var infowindow = new google.maps.InfoWindow();
+				var infowindowContent = document.getElementById('infowindow-content');
+					infowindow.setContent(infowindowContent);
+				var marker = new google.maps.Marker({
+					map: map,
+					anchorPoint: new google.maps.Point(0, -29)
+				});
+
+				autocomplete.addListener('place_changed', function() {
+					infowindow.close();
+					marker.setVisible(false);
+					var place = autocomplete.getPlace();
+					if (!place.geometry) {
+					// User entered the name of a Place that was not suggested and
+					// pressed the Enter key, or the Place Details request failed.
+					window.alert("No details available for input: '" + place.name + "'");
+						return;
+					}
+
+					// If the place has a geometry, then present it on a map.
+					if (place.geometry.viewport) {
+						map.fitBounds(place.geometry.viewport);
+					} else {
+						map.setCenter(place.geometry.location);
+						map.setZoom(17);  // Why 17? Because it looks good.
+					}
+					marker.setPosition(place.geometry.location);
+					marker.setVisible(true);
+
+					var address = '';
+					if (place.address_components) {
+						address = [
+							(place.address_components[0] && place.address_components[0].short_name || ''),
+							(place.address_components[1] && place.address_components[1].short_name || ''),
+							(place.address_components[2] && place.address_components[2].short_name || '')
+						].join(' ');
+					}
+
+					infowindowContent.children['place-icon'].src = place.icon;
+					infowindowContent.children['place-name'].textContent = place.name;
+					infowindowContent.children['place-address'].textContent = address;
+					infowindow.open(map, marker);
+				});
+
+				// Sets a listener on a radio button to change the filter type on Places
+				// Autocomplete.
+        //function setupClickListener(id, types) {
+        //  var radioButton = document.getElementById(id);
+        //  radioButton.addEventListener('click', function() {
+        //    autocomplete.setTypes(types);
+        //  });
+        //}
+
+       // setupClickListener('changetype-all', []);
+        //setupClickListener('changetype-address', ['address']);
+        //setupClickListener('changetype-establishment', ['establishment']);
+        //setupClickListener('changetype-geocode', ['geocode']);
+
+       // document.getElementById('use-strict-bounds')
+        //    .addEventListener('click', function() {
+        //      console.log('Checkbox clicked! New state=' + this.checked);
+        //      autocomplete.setOptions({strictBounds: this.checked});
+        //    });
+			}
+		$("#myModal").modal('show');
+    </script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAO85i8VMsi3fKBfIqggp98Qy_O35jsPY&libraries=places&callback=initMap"
+    async defer></script>
+    </body>
+</html>

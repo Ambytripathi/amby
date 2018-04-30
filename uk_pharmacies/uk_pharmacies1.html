@@ -1,0 +1,233 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>UK Pharmacies</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="js/themes/default/style.min.css"/>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jstree.min.js"></script>
+		<style>
+			html, body {
+				height:100%;
+				margin: 0;
+			}
+			#page_container {
+				height:100%; position: relative;
+			}
+			#filter_button {
+				position: absolute; top: 80px; left: 10px; z-index: 99;
+			}
+			#filter {
+				overflow: scroll; position: absolute; top: 110px; left: 10px; z-index: 99; width: 380px; height: 540px; background: grey;
+			}
+			#UKmap {
+				height:100%;
+			}
+			#myModal {
+				background-color: grey;
+			}
+		</style>
+		<script type="text/javascript">
+			$(function () {
+				var ownerData = [
+					{"id": "Top 20", "parent": "#", "text": "<strong>Top 20</strong>", "state": {opened: true, selected: false}},
+					{"id": "Boots UK Limited" , "parent": "Top 20", "text": "Boots UK Limited", "state": {selected: true}, "li_attr": {rel: "a"}, "type" : "b_blue"},
+					{"id": "Lloyds Pharmacy Ltd" , "parent": "Top 20", "text": "Lloyds Pharmacy Ltd", "state": {selected: true}, "type" : "grn_stars"},
+					{"id": "L Rowland & Co (Retail) Ltd" , "parent": "Top 20", "text": "L Rowland & Co (Retail) Ltd", "state": {selected: true}, "type" : "orange_stars"},
+    				{"id": "Bestway National Chemists Limited" , "parent": "Top 20", "text": "Bestway National Chemists Limited", "state": {selected: true}, "type" : "pink_blank"},
+    				{"id": "Tesco Stores Ltd" , "parent": "Top 20", "text": "Tesco Stores Ltd", "state": {selected: true}, "type" : "t"},
+    				{"id": "Asda Stores Ltd" , "parent": "Top 20", "text": "Asda Stores Ltd", "state": {selected: true}, "type" : "a"},
+    				{"id": "Bestway Panacea Healthcare Limited" , "parent": "Top 20", "text": "Bestway Panacea Healthcare Limited", "state": {selected: true}, "type" : "pink_blank"},
+    				{"id": "Day Lewis Plc" , "parent": "Top 20", "text": "Day Lewis Plc", "state": {selected: true}, "type" : "purple_blank"},
+    				{"id": "Superdrug Stores Plc" , "parent": "Top 20", "text": "Superdrug Stores Plc", "state": {selected: true}, "type" : "ylw_square"},
+    				{"id": "Gorgemead Ltd" , "parent": "Top 20", "text": "Gorgemead Ltd", "state": {selected: true}, "type" : "ltblu_blank"},
+    				{"id": "W M Morrison Supermarkets Plc" , "parent": "Top 20", "text": "W M Morrison Supermarkets Plc", "state": {selected: true}, "type" : "w"},
+    				{"id": "Paydens Ltd" , "parent": "Top 20", "text": "Paydens Ltd", "state": {selected: true}, "type" : "capital_small_highlight"},
+    				{"id": "PCT Healthcare Limited" , "parent": "Top 20", "text": "PCT Healthcare Limited", "state": {selected: true}, "type" : "webcam"},
+    				{"id": "H. I. Weldrick Ltd" , "parent": "Top 20", "text": "H. I. Weldrick Ltd", "state": {selected: true}, "type" : "small_green"},
+    				{"id": "Dudley Taylor Pharmacies Ltd" , "parent": "Top 20", "text": "Dudley Taylor Pharmacies Ltd", "state": {selected: true}, "type" : "small_blue"},
+    				{"id": "Waremoss Ltd" , "parent": "Top 20", "text": "Waremoss Ltd", "state": {selected: true}, "type" : "small_purple"},
+    				{"id": "Lincoln Co-operative Chemists Ltd" , "parent": "Top 20", "text": "Lincoln Co-operative Chemists Ltd", "state": {selected: true}, "type" : "measle_brown"},
+    				{"id": "WR Evans Healthcare Ltd" , "parent": "Top 20", "text": "WR Evans Healthcare Ltd", "state": {selected: true}, "type" : "measle_grey"},
+    				{"id": "Rajja Ltd" , "parent": "Top 20", "text": "Rajja Ltd", "state": {selected: true}, "type" : "measle_white"},
+    				{"id": "West Midlands Co-operative Chemists Ltd" , "parent": "Top 20", "text": "West Midlands Co-operative Chemists Ltd", "state": {selected: true}, "type" : "measle_turquoise"},
+					{"id": "Others", "parent": "#", "text": "<strong>Others</strong>", "state": {opened: true, selected: true}, "type" : "wht_stars"},
+				];
+				var tree = $('#filter').jstree({
+					'core': {
+						'data': ownerData
+					},
+					"types" : {
+						"default" : {
+							"icon" : "glyphicon glyphicon-star-empty"
+						},
+						"b_blue" : {
+							"icon" : "icons/b_blue.png"
+						},
+						"grn_stars" : {
+							"icon" : "icons/grn_stars.png"
+						},
+						"orange_stars" : {
+							"icon" : "icons/orange_stars.png"
+						},
+						"pink_blank" : {
+							"icon" : "icons/pink_blank.png"
+						},
+						"t" : {
+							"icon" : "icons/t.png"
+						},
+						"a" : {
+							"icon" : "icons/a.png"
+						},
+						"pink_blank" : {
+							"icon" : "icons/pink_blank.png"
+						},
+						"purple_blank" : {
+							"icon" : "icons/purple_blank.png"
+						},
+						"ylw_square" : {
+							"icon" : "icons/ylw_square.png"
+						},
+						"ltblu_blank" : {
+							"icon" : "icons/ltblu_blank.png"
+						},
+						"w" : {
+							"icon" : "icons/w.png"
+						},
+						"capital_small_highlight" : {
+							"icon" : "icons/capital_small_highlight.png"
+						},
+						"webcam" : {
+							"icon" : "icons/webcam.png"
+						},
+						"small_green" : {
+							"icon" : "icons/small_green.png"
+						},
+						"small_blue" : {
+							"icon" : "icons/small_blue.png"
+						},
+						"small_purple" : {
+							"icon" : "icons/small_purple.png"
+						},
+						"measle_brown" : {
+							"icon" : "icons/measle_brown.png"
+						},
+						"measle_grey" : {
+							"icon" : "icons/measle_grey.png"
+						},
+						"measle_white" : {
+							"icon" : "icons/measle_white.png"
+						},
+						"measle_turquoise" : {
+							"icon" : "icons/measle_turquoise.png"
+						},
+						"wht_stars" : {
+							"icon" : "icons/wht_stars.png"
+						}
+					},
+					'plugins' : [ 'wholerow', 'checkbox', 'types' ]
+				});
+				tree.on('click', function (e) {
+					query = "'PharmacyRegistrationNumber' > 1";
+					var data = $('#filter').jstree(true).get_json('#', { flat: true, no_data : true, no_id : true,  no_li_attr : true, no_a_attr : true, no_children : false });
+					var datast = data.map(function(a) {return a.state;});
+					for (var i=0; i < data.length ; ++i)
+						if (datast[i].selected === false) {
+							if (data[i].text === "<strong>Others</strong>") {
+								query += " AND 'Style' NOT MATCHES 'wht_stars'";
+							} else if (data[i].text === "L Rowland & Co (Retail) Ltd") {
+								query += " AND 'Style' NOT MATCHES 'orange_stars'";
+							} 
+							else {
+								query += " AND 'OwnerName' NOT MATCHES '" + data[i].text + "'";
+							}
+						}
+					layer.setOptions({
+						query: {
+							select: 'col13',
+							from: '1v1bam98PdKDGuQk5rphsfRXqKsTOe__jBzuW7ioP',
+							where: query
+						}
+					});
+				});
+				
+				$('.btn-login-submit').click(function(e){
+					e.preventDefault();
+					var element = $(this).parent().parent().parent();
+					lusername = $("#lusername").val();
+					var lpassword = $("#lpassword").val();
+					$.post("login.php", { lusername: lusername, lpassword: lpassword }).done(function(data) {
+						if (data == "OK!" ){
+							$('.login-box').fadeOut(function(){
+								//$('#myModal').remove();
+								//$('#myModal').fadeIn();
+								$("#myModal").modal('hide');
+							});
+						} else {
+							alert("Wrong credentials (J)!");
+						}
+					});
+				});
+			});
+		</script>
+    </head>
+    <body>
+		<div id="page_container">
+			<div id="myModal" class="modal fade">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="well login-box">
+					<form action="" method="post" target="_blank">
+						<legend>Login</legend>
+						<div class="form-group">
+							<label for="lusername">E-mail or Username</label>
+							<input name="lusername" id="lusername" value='' placeholder="E-mail or Username" type="text" class="form-control" />
+						</div>
+						<div class="form-group">
+							<label for="lpassword">Password</label>
+							<input name="lpassword" id="lpassword" value='' placeholder="Password" type="text" class="form-control" />
+						</div>
+						<div class="form-group text-center">
+							<button class="btn btn-danger btn-cancel-action">Cancel</button>
+							<input type="submit" class="btn btn-success btn-login-submit" value="Login" />
+						</div>
+					</form>
+				</div>
+							</div>
+						</div>
+			</div>
+			<button class="active btn-primary" id="filter_button" data-toggle="collapse" data-target="#filter">Filter</button>
+			<div id="filter" class="collapse" <!-- class="pre-scrollable collapse" -->>
+			</div>
+			<div id="UKmap"></div>
+		</div>
+        <script>
+		var map, layer;
+		var query = "";
+			function initMap() {
+				map = new google.maps.Map(document.getElementById('UKmap'), {
+					center: {lat: 55.3, lng: -3.4715817557},
+					zoom: 6
+				});
+				layer = new google.maps.FusionTablesLayer({
+					query: {
+						select: 'col13',
+						from: '1v1bam98PdKDGuQk5rphsfRXqKsTOe__jBzuW7ioP',
+						where: query
+					},
+					options: {
+						styleId: 2,
+						templateId: 2
+					}
+				});
+				layer.setMap(map);
+			}
+		$("#myModal").modal('show');
+    </script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAO85i8VMsi3fKBfIqggp98Qy_O35jsPY&callback=initMap"
+    async defer></script>
+    </body>
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css"/>
+        <link rel="stylesheet" href="css/main.css"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/jumbotron.css"/>
+		<link rel="stylesheet" href="js/themes/default/style.min.css"/>
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		<script type="text/javascript" src="js/jstree.min.js"></script>
+		<script src="js/data.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				var tree = $('#county_search').jstree({
+					'core': {
+						'data': treeCountyData
+					}, 
+					"plugins" : [ "wholerow", "checkbox" ],
+				});
+				//tree.bind('ready.jstree', function (event, data) {
+				//	var $tree = $(this);
+				//	$($tree.jstree().get_json($tree, {
+				//		flat: true
+				//	})).each(function () {
+				//		var checked = $(this).attr('rel');
+				//		var node;
+				//		if( checked = "true"){
+				//			node = $("#county_search").jstree().select_node(this.id);
+				//		}
+				//	});
+				//});
+				tree.on('click', function (e) {
+					query = "'PharmacyRegistrationNumber' > 1";
+					//var data = tree.jstree('get_selected', true);
+					//var output = data.map(function(data) {return data.text;});
+					//for (var i=0; i < output.length ; ++i)
+					//	query += " OR 'County' MATCHES '" + output[i] + "'";
+					//query = "";
+					//query += "'County' IN ('";
+					var data = $('#county_search').jstree(true).get_json('#', { flat: true, no_data : true, no_id : true,  no_li_attr : true, no_a_attr : true, no_children : false });
+					var datast = data.map(function(a) {return a.state;});
+					//var data = $('#county_search').jstree(true).get_json('#', { flat : true});
+					var sir = [];
+					//var datas = JSON.stringify(data);
+					//var datast = JSON.stringify(datast);
+					for (var i=0; i < data.length ; ++i)
+						if (datast[i].selected === false) {
+						//sir[i] = "'County' NOT MATCHES '" + data[i].text + "'";
+						//query += "'County' NOT MATCHES '" + data[i].text + "'";
+						query += " AND 'County' NOT MATCHES '" + data[i].text + "'";
+						}
+					//sirul = sir.join(" AND ");
+					//query += sirul;
+					//selected, text
+					//var output = [];
+					//for (var i = 0; i < data.length; i++) {
+					//	output.push(data[i].selected);
+					//	output.push(data[i].text);
+					//}
+					//alert(query);
+					layer.setMap(null);
+					//layer.setOptions({
+					//	query: {
+					//		select: 'AddressLine1',
+					//		from: '19anrFIC4Ii3vGX0DVyZBdqrnzotYYArJS27YXzVn',
+					//		where: query
+					//	}
+					//});
+					if (typeof(queryo) == 'undefined') {fquery = query} else {fquery = query + " AND " + queryo;}
+					//alert(fquery);
+					layer = new google.maps.FusionTablesLayer({
+					query: {
+						select: 'AddressLine1',
+						from: '19anrFIC4Ii3vGX0DVyZBdqrnzotYYArJS27YXzVn',
+						where: fquery
+					}
+					});
+					layer.setMap(map);
+				});
+				
+				var treeo = $('#owner_search').jstree({
+					'core': {
+						'data': treeOwnerData
+					},
+					"plugins" : [ "wholerow", "checkbox" ]
+				});
+				treeo.on('click', function (e) {
+					queryo = "'PharmacyRegistrationNumber' > 1";
+					var datao = $('#owner_search').jstree(true).get_json('#', { flat: true, no_data : true, no_id : true,  no_li_attr : true, no_a_attr : true, no_children : false });
+					var datasto = datao.map(function(a) {return a.state;});
+					var siro = [];
+					for (var i=0; i < datao.length ; ++i)
+						if (datasto[i].selected === false) {
+						queryo += " AND 'Owner' NOT MATCHES '" + datao[i].text + "'";
+						}
+					if (typeof(query) == 'undefined') {fquery = queryo} else {fquery = query + " AND " + queryo;}
+					//alert(fquery);
+					layer.setMap(null);
+					layer = new google.maps.FusionTablesLayer({
+					query: {
+						select: 'AddressLine1',
+						from: '19anrFIC4Ii3vGX0DVyZBdqrnzotYYArJS27YXzVn',
+						where: fquery
+					}
+					});
+					layer.setMap(map);
+				});
+			});
+		</script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <!-- NAVBAR -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">UK Pharmacies</a>
+				</div>
+			</div>
+		</nav>
+		<!-- Main jumbotron for a primary marketing message or call to action -->
+		<div class="jumbotron">
+			<div class="container">
+				<p>This is a map with all UK Pharmacies. Please use the lists to filter by County or by Owner.</p>
+			</div>
+		</div>
+		<!-- MAIN -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="pre-scrollable" id="county_search">
+					</div>
+					<div id="owner_search" class="pre-scrollable">
+					</div>
+				</div>
+				<div class="col-md-8">
+					<h3>Map</h3>
+					<div id="map"></div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		
+		<!-- FOOTER -->
+		<footer>
+			<p>&copy; 2017 Your Company, Inc.</p>
+		</footer>
+		
+        <!-- Google Maps code. -->
+        <script>
+		var map, query, queryo, fquery, layer;
+		query = "";
+			function initMap() {
+				map = new google.maps.Map(document.getElementById('map'), {
+					center: {lat: 55.3, lng: -3.4715817557},
+					zoom: 5
+				});
+				layer = new google.maps.FusionTablesLayer({
+					query: {
+						select: 'AddressLine1',
+						from: '19anrFIC4Ii3vGX0DVyZBdqrnzotYYArJS27YXzVn',
+						where: query
+					}
+				});
+				layer.setMap(map);
+			}
+    </script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAO85i8VMsi3fKBfIqggp98Qy_O35jsPY&callback=initMap"
+    async defer></script>
+    </body>
+</html>

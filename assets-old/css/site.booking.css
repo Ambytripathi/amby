@@ -1,0 +1,383 @@
+/* line 1, D:/xampp/htdocs/testing/styles/site.booking.scss */
+.booking-details {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100%;
+  max-width: 44.8rem;
+  padding: 1.6rem 0;
+  transform: translate(-50%, 0);
+  transition: left 0.3s, transform 0.3s; }
+  /* line 10, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-details .booking-details-action {
+    color: var(--accent);
+    font-size: 2.4rem;
+    margin-left: 1.2rem;
+    padding-left: 1.6rem;
+    border-left: 2px solid rgba(0, 0, 0, 0.05); }
+  /* line 18, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-details .booking-input,
+  .booking-details .booking-suggestions .suggestion {
+    background: #ffffff;
+    margin: 0 0 0.8rem;
+    padding: 1.2rem 2.4rem;
+    display: flex;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25); }
+  /* line 26, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-details .booking-input input {
+    padding: 0;
+    border: transparent;
+    background: transparent;
+    padding: 1.2rem 0;
+    margin: -1.2rem 0; }
+  /* line 33, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-details .booking-suggestions .suggestion:hover {
+    background: #fafafa; }
+  /* line 36, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-details .suggestion {
+    cursor: pointer;
+    display: flex; }
+  /* line 40, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-details .booking-details-row {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem; }
+    /* line 45, D:/xampp/htdocs/testing/styles/site.booking.scss */
+    .booking-details .booking-details-row .details-distance {
+      text-align: right;
+      flex: 1 1 auto; }
+    /* line 49, D:/xampp/htdocs/testing/styles/site.booking.scss */
+    .booking-details .booking-details-row .details-name {
+      font-weight: 500;
+      margin-right: 0.8rem; }
+    /* line 53, D:/xampp/htdocs/testing/styles/site.booking.scss */
+    .booking-details .booking-details-row .details-address {
+      opacity: .5; }
+    /* line 56, D:/xampp/htdocs/testing/styles/site.booking.scss */
+    .booking-details .booking-details-row .details-search {
+      font-size: 1.6rem;
+      opacity: 0.25; }
+  /* line 61, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-details .suggestion .booking-details-action {
+    border-color: transparent; }
+  /* line 65, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-details .booking-suggestions,
+  .booking-details .booking-detail {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 7.2rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s; }
+
+/* line 76, D:/xampp/htdocs/testing/styles/site.booking.scss */
+.show-suggestions .booking-suggestions {
+  pointer-events: all;
+  opacity: 1; }
+
+/* line 82, D:/xampp/htdocs/testing/styles/site.booking.scss */
+.show-panel #booking-panel {
+  transform: translate(0); }
+
+/* line 85, D:/xampp/htdocs/testing/styles/site.booking.scss */
+.show-panel .booking-details {
+  left: 49.2rem;
+  transform: none; }
+
+/* line 89, D:/xampp/htdocs/testing/styles/site.booking.scss */
+.show-panel .booking-detail {
+  pointer-events: all;
+  opacity: 1; }
+
+/* line 95, D:/xampp/htdocs/testing/styles/site.booking.scss */
+.booking-detail {
+  background: #ffffff;
+  margin: 0 0 0.8rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  font-size: 1.4rem;
+  max-height: 32rem;
+  overflow: auto; }
+  /* line 104, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-detail .suggestion {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin: 0 -2.4rem 1.2rem;
+    padding: 0 2.4rem 1.2rem; }
+  /* line 109, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-detail .booking-details-expanded {
+    text-align: left; }
+  /* line 112, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-detail .establishment-meta {
+    position: relative;
+    margin: 0 0 1.6rem; }
+  /* line 116, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-detail .establishment-meta i {
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 2.0rem; }
+  /* line 123, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-detail .establishment-meta strong {
+    font-weight: 500; }
+  /* line 126, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-detail .establishment-meta-info {
+    position: relative;
+    padding: 0 2.4em 0.8rem; }
+  /* line 130, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-detail .establishment-meta-info span {
+    line-height: 2rem; }
+  /* line 133, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-detail .establishment-content {
+    line-height: 1.5; }
+  /* line 136, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-detail .establishment-info-photos {
+    margin: 2rem -0.08rem !important;
+    display: flex;
+    margin: auto; }
+  /* line 141, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-detail .establishment-info-photos .photo-wrapper {
+    flex: 1 1 100%;
+    margin: 0.4rem; }
+  /* line 145, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-detail .establishment-info-photos .photo {
+    background: rgba(0, 0, 0, 0.05);
+    background-position: center;
+    background-size: cover;
+    padding-top: 75%; }
+  /* line 151, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-detail .establishment-info-photos-wrapper {
+    overflow: auto;
+    width: 100%;
+    margin: -1.2rem -0.5rem; }
+  /* line 156, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-detail .establishment-info-photos {
+    min-width: 52rem; }
+
+/* line 161, D:/xampp/htdocs/testing/styles/site.booking.scss */
+#booking-panel {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 48rem;
+  padding: 2rem;
+  color: #ffffff;
+  background: var(--accent);
+  transform: translate(-100%, 0);
+  transition: transform 0.3s; }
+  /* line 174, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  #booking-panel .booking-panel-header {
+    margin: 0 0 1.6rem; }
+    /* line 176, D:/xampp/htdocs/testing/styles/site.booking.scss */
+    #booking-panel .booking-panel-header .booking-panel-title {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: 0.1px; }
+    /* line 181, D:/xampp/htdocs/testing/styles/site.booking.scss */
+    #booking-panel .booking-panel-header .booking-panel-subtitle {
+      font-size: 1.4rem;
+      letter-spacing: 0.1px;
+      margin: 0.8rem 0 1.6rem; }
+    /* line 186, D:/xampp/htdocs/testing/styles/site.booking.scss */
+    #booking-panel .booking-panel-header .booking-panel-select {
+      font-size: 12px;
+      letter-spacing: 0.1px;
+      display: flex;
+      justify-content: center; }
+      /* line 191, D:/xampp/htdocs/testing/styles/site.booking.scss */
+      #booking-panel .booking-panel-header .booking-panel-select li {
+        background: rgba(255, 255, 255, 0.25);
+        line-height: 2.4rem;
+        margin: 0.2rem;
+        padding: 0 1.6rem;
+        cursor: pointer; }
+        /* line 197, D:/xampp/htdocs/testing/styles/site.booking.scss */
+        #booking-panel .booking-panel-header .booking-panel-select li:hover {
+          background: rgba(255, 255, 255, 0.5); }
+        /* line 200, D:/xampp/htdocs/testing/styles/site.booking.scss */
+        #booking-panel .booking-panel-header .booking-panel-select li.active {
+          background: white;
+          color: var(--accent); }
+        /* line 204, D:/xampp/htdocs/testing/styles/site.booking.scss */
+        #booking-panel .booking-panel-header .booking-panel-select li:first-child {
+          border-bottom-left-radius: 12rem;
+          border-top-left-radius: 12rem;
+          padding-right: 1.2rem; }
+        /* line 209, D:/xampp/htdocs/testing/styles/site.booking.scss */
+        #booking-panel .booking-panel-header .booking-panel-select li:last-child {
+          border-bottom-right-radius: 12rem;
+          border-top-right-radius: 12rem;
+          padding-left: 1.2rem; }
+  /* line 217, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  #booking-panel .booking-panel-table {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%; }
+    /* line 221, D:/xampp/htdocs/testing/styles/site.booking.scss */
+    #booking-panel .booking-panel-table .booking-panel-table-header {
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: 0.1px;
+      margin: 0 0 1.6rem; }
+    /* line 227, D:/xampp/htdocs/testing/styles/site.booking.scss */
+    #booking-panel .booking-panel-table .booking-panel-day-selector {
+      display: flex;
+      flex: 0 0 auto; }
+      /* line 230, D:/xampp/htdocs/testing/styles/site.booking.scss */
+      #booking-panel .booking-panel-table .booking-panel-day-selector li {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+        background: #f3f6f7;
+        color: #000000;
+        line-height: 1.5;
+        padding: 0.8rem;
+        cursor: pointer; }
+        /* line 242, D:/xampp/htdocs/testing/styles/site.booking.scss */
+        #booking-panel .booking-panel-table .booking-panel-day-selector li:hover {
+          background: #f3dce8; }
+        /* line 245, D:/xampp/htdocs/testing/styles/site.booking.scss */
+        #booking-panel .booking-panel-table .booking-panel-day-selector li.active {
+          background: #ea3594;
+          color: #ffffff;
+          font-size: 1.4rem; }
+    /* line 252, D:/xampp/htdocs/testing/styles/site.booking.scss */
+    #booking-panel .booking-panel-table .booking-panel-time-selector {
+      overflow: auto;
+      flex: 1 1 auto;
+      font-size: 14px;
+      letter-spacing: 0.1px;
+      text-align: left;
+      color: #333442;
+      background: #ffffff; }
+      /* line 260, D:/xampp/htdocs/testing/styles/site.booking.scss */
+      #booking-panel .booking-panel-table .booking-panel-time-selector li {
+        display: flex;
+        height: 4rem;
+        border-bottom: 2px solid #f3f6f7; }
+        /* line 264, D:/xampp/htdocs/testing/styles/site.booking.scss */
+        #booking-panel .booking-panel-table .booking-panel-time-selector li:hover {
+          background: rgba(0, 0, 0, 0.05); }
+        /* line 267, D:/xampp/htdocs/testing/styles/site.booking.scss */
+        #booking-panel .booking-panel-table .booking-panel-time-selector li.selected {
+          color: #ffffff;
+          background: #03d7a8; }
+          /* line 270, D:/xampp/htdocs/testing/styles/site.booking.scss */
+          #booking-panel .booking-panel-table .booking-panel-time-selector li.selected > * {
+            border-color: rgba(255, 255, 255, 0.15) !important; }
+        /* line 274, D:/xampp/htdocs/testing/styles/site.booking.scss */
+        #booking-panel .booking-panel-table .booking-panel-time-selector li .time {
+          text-align: right;
+          flex: 0 0 50%;
+          padding-right: 4rem;
+          border-right: 2px solid #f3f6f7;
+          line-height: 4rem; }
+        /* line 281, D:/xampp/htdocs/testing/styles/site.booking.scss */
+        #booking-panel .booking-panel-table .booking-panel-time-selector li .price {
+          flex: 0 1 50%;
+          padding-left: 4rem;
+          line-height: 4rem;
+          font-weight: bold; }
+        /* line 287, D:/xampp/htdocs/testing/styles/site.booking.scss */
+        #booking-panel .booking-panel-table .booking-panel-time-selector li .price:before {
+          content: 'Price ';
+          font-weight: normal;
+          opacity: 0.7; }
+        /* line 292, D:/xampp/htdocs/testing/styles/site.booking.scss */
+        #booking-panel .booking-panel-table .booking-panel-time-selector li .checked {
+          line-height: 4rem;
+          padding: 0 2rem;
+          font-size: 1.6rem;
+          color: #ffffff; }
+  /* line 301, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  #booking-panel .booking-panel-footer {
+    margin-top: 3.2rem;
+    text-align: right; }
+    /* line 304, D:/xampp/htdocs/testing/styles/site.booking.scss */
+    #booking-panel .booking-panel-footer .btn {
+      background: #ffffff;
+      color: var(--accent); }
+
+@media screen and (max-width: 896px) {
+  /* line 312, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  #booking .booking-wrapper {
+    min-height: 48rem; }
+  /* line 315, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .show-panel .booking-details {
+    max-width: 34rem;
+    left: 45.2rem; }
+  /* line 319, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  #booking-panel {
+    width: 44rem; } }
+
+@media screen and (max-width: 767px) {
+  /* line 325, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-details {
+    width: 95%; }
+  /* line 328, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .booking-details .booking-details-row .details-distance {
+    display: none; }
+  /* line 331, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  #booking .booking-wrapper {
+    transition: padding-top 0.6s; }
+  /* line 334, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  #booking .booking-wrapper.w-show-panel {
+    padding-top: 125%; }
+    /* line 336, D:/xampp/htdocs/testing/styles/site.booking.scss */
+    #booking .booking-wrapper.w-show-panel #booking-map {
+      top: 50%; }
+  /* line 340, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  #booking-panel {
+    width: 100%;
+    bottom: 50%;
+    transform: translate(0, -150%); }
+    /* line 345, D:/xampp/htdocs/testing/styles/site.booking.scss */
+    #booking-panel .booking-panel-header .booking-panel-title {
+      font-size: 2rem; }
+    /* line 348, D:/xampp/htdocs/testing/styles/site.booking.scss */
+    #booking-panel .booking-panel-header .booking-panel-subtitle {
+      font-size: 1.2rem; }
+    /* line 352, D:/xampp/htdocs/testing/styles/site.booking.scss */
+    #booking-panel .booking-panel-table {
+      margin: 0 -1.6rem; }
+      /* line 354, D:/xampp/htdocs/testing/styles/site.booking.scss */
+      #booking-panel .booking-panel-table .booking-panel-day-selector {
+        width: 40rem; }
+      /* line 357, D:/xampp/htdocs/testing/styles/site.booking.scss */
+      #booking-panel .booking-panel-table .booking-panel-day-selector-wrapper {
+        overflow-x: auto;
+        flex: 0 0 auto;
+        background: #f3f6f7; }
+  /* line 365, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .show-panel #booking-panel {
+    transform: translate(0); }
+  /* line 368, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .show-panel .booking-details {
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: auto; }
+  /* line 374, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  .show-panel .booking-details {
+    max-width: 100%; } }
+
+@media screen and (max-width: 640px) {
+  /* line 381, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  #booking .booking-wrapper.w-show-panel {
+    padding-top: 250%;
+    min-height: 96rem; }
+  /* line 385, D:/xampp/htdocs/testing/styles/site.booking.scss */
+  #booking-panel .booking-panel-table .booking-panel-time-selector li .price:before {
+    display: none; } }
+
+/*# sourceMappingURL=site.booking.css.map */

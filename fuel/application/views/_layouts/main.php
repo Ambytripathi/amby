@@ -8,9 +8,21 @@ error_reporting(0);
 <script language="javascript">
     var clinic_id = '';
 </script>
-
+<script>
+function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById(cityName).style.display = "block";  
+}
+</script>
+<style>
+   
+</style>
 <page id="home">
-    <section id="booking" class="text-section">
+    <section id="booking" class="text-section" style="z-index: 9999;">
         <div class="container">
             <div class="section-header homeSec">
                 <h1>Private GP Services At Your Local Pharmacy</h1>
@@ -33,15 +45,20 @@ error_reporting(0);
             </form>
         </div>
     </section>
-     <section id="logos-media" style="background-color:#F4F6F7">
+     <section id="logos-media" style="margin-top: -4%;background-color:#F4F6F7">
         <div class="container">
-            <h1 style="color:black;">“Revolutionary”</h1>
-            <div class="logos-list">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Evening_Standard_logo.png" title="BBC" alt="BBC logo" >
-                <img src="<?php echo base_url('assets/images/logo/logo-metro.png')?>" title="Metro" alt="Metro logo" >
-                <img src="<?php echo base_url('assets/images/logo/logo-pj.png');?>" title="The Pharmaceutical Journal" tag="The Pharmaceutical Journal logo" >
-                <img src="<?php echo base_url('assets/images/logo/logo-et.png');?>" title="Evening Times" alt="Evening Times logo" >
-                <img src="<?php echo base_url('assets/images/logo/logo-pulse.png');?>" title="Pulse" alt="Pulse logo" >
+            <h1 style="color:black;margin-top: 6%;font-size:1.5em" id="f" class="city">“Revolutionary”</h1>
+            <h1 style="color:black;margin-top: 6%;display:none;font-size:1.5em" id="s" class="city">“As easy as ordering a cab on your<br> smartphone”</h1>
+            <h1 style="color:black;margin-top: 6%;display:none;font-size:1.5em" id="t" class="city">“Top quartile of most favourable reports”</h1>
+            <h1 style="color:black;margin-top: 6%;display:none;font-size:1.5em" id="f4" class="city">“A game changer”</h1>
+            <h1 style="color:black;margin-top: 6%;display:none;font-size:1.5em" id="fi" class="city">“An Ai doctor in your pocket”</h1>
+            <div class="logos-list" style="justify-content:center;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Evening_Standard_logo.png" title="BBC" alt="BBC logo"  style="margin: 2.8rem;" onclick="openCity('f')">
+                <img src="http://static1.squarespace.com/static/52c94f4ce4b097374c3a763c/537a44bee4b0fc68f336b2a1/575d7a2645bf2196ee6d39a9/1476194052548/bbc-news.png?format=1000w" title="Metro" alt="Metro logo"  style="margin: 2.8rem;" onclick="openCity('s')">
+                <img src="http://fixwebsupport.com/ambi/medicspot/assets/images/logo/logo-cqc.png" title="Pulse" alt="Pulse logo"  style="margin: 2.8rem;" onclick="openCity('t')">
+                <img src="http://aboutmeditation.com/wp-content/uploads/2017/07/logo-huffington-post.png" title="The Pharmaceutical Journal" tag="The Pharmaceutical Journal logo" style="margin: 2.8rem;"  onclick="openCity('f4')">
+                <img src="https://www.ampproject.org/static/img/case-studies/wired_logo.png" title="Evening Times" alt="Evening Times logo"  style="margin: 2.8rem;" onclick="openCity('fi')">
+                
             </div>
         </div>
     </section>
@@ -72,6 +89,7 @@ error_reporting(0);
     <section id="steps" class="steps threeSteps" style="background-color:#F4F6F7">
         <div class="container">
             <h1>See a Private GP Quickly</h1>
+            <p class="help_description">Seeing a doctor has never been so easy. Eliminate your second journey by having a private GP appointment from your local pharmacy consulting room. Get seen and collect your medication in three quick and easy steps.</p>
             <ul class="steps-list">
                 <li>
                     <img class="step-icon" src="<?php echo base_url('assets/images/icons/Private-GP-Near-Me-Icon.png');?>" alt="Map with a location marker and the MedicSpot logo to illustrate the short distance to your nearest private GP">
@@ -81,12 +99,7 @@ error_reporting(0);
                 <li>
                     <img class="step-icon" src="<?php echo base_url('assets/images/icons/Online-Doctor.png');?>" alt="Illustration of an online doctor with a stethoscope draped over the doctor's shoulders"  >
                     <h3>Visit Your Selected Pharmacy</h3>
-                    <p class="margintopInner">Seeing a doctor has never been so
-                            easy. Eliminate your second journey by
-                            having a private GP appointment from
-                            your local pharmacy consulting room.
-                            Get seen and collect your medication in
-                            three quick and easy steps.</p>
+                    <p class="margintopInner">Have an online video consultation and full examination with a private doctor at the pharmacy.</p></p>
                 </li>
                 <li>
                     <img class="step-icon" src="<?php echo base_url('assets/images/icons/Prescription.png');?>" alt=" Illustration of two antibiotics and your prescription" >
@@ -112,10 +125,10 @@ error_reporting(0);
                     <p class="margintopInner">I founded MedicSpot with a single mission - to increase patient experiences and outcomes, leading to a healthier nation. As an online private GP, I feel clinically supported by the ability to take vital signs and to examine patients safely and accurately.</p>
                 </li>
                 <li style="box-shadow:none !important;">
-                    <img class="step-icon" src="https://www.medicspot.co.uk/assets/images/zubair2.png" alt="White clipboard icon with check mark on MedicSpot purple background" >
+                    <img class="step-icon" src="https://www.medicspot.co.uk/assets/images/Dr_Abby.jpeg" alt="White clipboard icon with check mark on MedicSpot purple background" >
                     <h3 style="text-transform: capitalize;color:black;">Dr. Abby Hyams</h3>
                     <span>12 years experience</span><br><br>
-                    <p class="margintop">I joined MedicSpot for the opportunity to spend more time with my young family since I was working long hours as an NHS GP partner. MedicSpot allows me to work from home in a clinically supported environment whilst still allowing me to do some NHS work. It’s the best of both worlds</p>
+                    <p class="margintop">I joined MedicSpot for the opportunity to spend more time with my young family since I was working long hours as an NHS GP partner. MedicSpot allows me to work from home in a clinically supported environment whilst still allowing me to do some NHS work. It’s the best of both worlds.</p>
                 </li>
             </ul>
             </div>
@@ -153,8 +166,9 @@ error_reporting(0);
     <section class="logoHome" id="logos-qa" style="background-color:#F4F6F7">
         <div class="container">
             
-            <div class="logos-list" style="border:2px solid #6D56EE;border-radius:10px;max-width: 64rem;">
-                <img src="http://fixwebsupport.com/ambi/medicspot/assets/images/logo/logo-cqc.png" style=""><p style="color:#6D56EE;">MedicSpot is regulated by the Care Quality Commision<br>and is one of only afew digital healthcare providers to have<br>received top marks for clinical safety.</p>
+            <div class="cqc_mine">
+                <img src="http://fixwebsupport.com/ambi/medicspot/assets/images/logo/logo-cqc.png" style="width: 25rem !important;
+    height: auto !important;"><div class="cqc_p">MedicSpot is regulated by the Care Quality Commision<br>and is one of only afew digital healthcare providers to have<br>received top marks for clinical safety.</div>
 
             </div>
         </div>

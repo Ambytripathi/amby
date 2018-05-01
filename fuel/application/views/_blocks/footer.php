@@ -31,28 +31,32 @@
 					</section>
 				</nav>
 
-				<div id="page-social">
-					<a href="#top" class="page-logo" title="Medicspot">Medicspot</a>
+				
+			</div>
+			
+			<div id="page-legal" style="background-color: #F3F6F7;height: 170px;">
+				<div class="container" style="background-color: #F3F6F7;">
+					<div style="float: left;">
+					<a href="<?php echo base_url('terms');?>" target="_blank">Terms & Conditions</a>
+					<a href="<?php echo base_url('privacy');?>" target="_blank">Privacy &amp; Cookies Policy</a>
+					<div>Medicspot Limited is registered in England at 93 Elizabeth Court, London, NW1 6EJ Registered No. 10089666. © 2017</div>
+					</div>
+					
+
+					<div id="page-social" style="float: left;background-color: #F4F6F7;margin-left: 5%;">
 					<nav class="nav-social">
 						<a href="https://twitter.com/medicspot_uk" target="_blank" title="Twitter"><i class="zmdi fa fa-twitter"></i></a>
 						<a href="https://www.facebook.com/medicspotuk/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
 						<a href="https://www.linkedin.com/company/17946635/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+						<a href="https://www.instagram.com/medicspot/" target="_blank" title="LinkedIn"><i class="fa fa-instagram"></i></a>
 					</nav>
 				</div>
-			</div>
-			
-			<div id="page-legal">
-				<div class="container">
-					<a href="<?php echo base_url('terms');?>" target="_blank">Terms & Conditions</a>
-					<a href="<?php echo base_url('privacy');?>" target="_blank">Privacy &amp; Cookies Policy</a>
-					<div>Medicspot Limited is registered in England at 93 Elizabeth Court, London, NW1 6EJ Registered No. 10089666. © 2017</div>
-
-					<div id="mhra-fmd-placeholder" style="text-align: right;">
+				<div id="mhra-fmd-placeholder" style="text-align: left;float: left;background-color: #F4F6F7;margin-left: 8%;">
 						<a href="https://medicine-seller-register.mhra.gov.uk/search-registry/649" target="_blank">
 							<img src="<?php echo base_url('assets/images/mhra.png');?>" style="width:90px;" alt="Verification icon" >
 						</a>
 					</div>
-
+					
 				</div>
 			</div>
 		</footer>
